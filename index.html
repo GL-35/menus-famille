@@ -1,0 +1,1326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="Menus">
+<meta name="theme-color" content="#FBF7F2">
+<link rel="apple-touch-icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFuklEQVR4Xu3dzW8UZRzA8Zltt5o2trLYWpWAkphaUEGyVqz0hYpUE9CmtBw0qCduXjx59eQ/YEzk4KFXWlEjkZQi2xbbWMpbU19IRAImSlvdIi9FSrtrZJNmeWZnd361M7Mzz/dzLAM8+8yP78y+tJib9nUYQC4RtgV2GA4wHJCjHKAckKMcoByQoxygHJCjHKAckKMcoByQoxygHJCjHKAckKMcoByQoxygHJCjHKAckKMcoByQoxygHJArlf8W34wf6LH+3fH9b/u2IAeCuOYlgbms5Nxlw7D9ejEI4pqzBWM47HY5I/+v+iWIa1YEYDicnHsnx3jJyXqcHOOvAAwH/MJwwBbDAYYDcpQDlANylAOUA3IuvrfS/8qMfD3L5/FftyJWas07j1avyHoUXFbAZQVylAOUA3KUA5QDcpQDlANylANBLkfy4GsFT6CTY7zkZD1OjvFXMMqRfx+Lc5eDuGZFMIbDMGz3ujgnI8NubcW85mwuvvG24oKyp9mCuOYlgSkHvMdwIMjPVuAXygHKATnKAcoBOcoBygE5ygHKATnKAcoBOcoBygE5Fz/PEev+Rr4eLMtRV35SL5cVcFmBHOUA5YAc5QDlgBzlAOWAHOUA5YAc5QDlgBzlAOWAHOUA5YAc5QDlgBzlAOWAHOUA5YAc5QDlgJyL39Tko3c/+nDy4oU8C3h/71tv7mh3uMIPPv144NRYnoPfeXXXe517Hf5pAaLpZaVv6FuHJ+mva38nzp5yeHDIaDocl678cfLnH52cy8+Hji8sLjo5Mnw0HQ7DMHoHjxU8nalU6tBwouBhYaXvcCTOnJ65Opv/vCbOnp6eTYb13Bek73Aspha/ODGYf4N6E4XrEmL6DodhGIeGE6lUyu7sXp66cvK8o/uSsNJ6OKZnk0MTZ+xO7cHEsXQ6HdYT74TWw2EY/01Azm36Z37+69FhJzsYYnoNx+rKKuVcjv30w2/TU9YTfGRs5PrcnPL1h6oeDPEoWOk1HLsbm0oiJdm7kE6n+wZzvCBmLcqa6pp4XT3DEVo1q1a1bH5OeXhfjQzN37mT/cWJX385f/mSctieljbTNEO7NbnoVQ7DMLpaX1b24drNm/3j32d/sTcxoBxTFo2+8VKLVpNhGPoNx/N1G9bVPqKc5uzXM67euD4wrr7NtjP+QmVFBcMRcqZp7mluUx7k5MULS9eRL08Mzi8sKAd0t+4I+b5wWcnY3dh0f1mZGo+7b7Wk0um+oePKL9Wve3zjE+sZDi08UF7e3vCi8lCPjI3euDU3Mnnu9z9nyEaGdjekGd2W29Jbt28fHv3O+gy2sryivWGrFv9oLDQdjqfW5rhS9PQfHp2cULZoV2PTfVH1GqQJTYfjbjzUe8ypZDJ175sppml2tap3r/rQdzicPDttqN+4tqZWn2lQ6DscZdHo643N+U+89dZEK/oOR+bV0jyviD8cizU/q77WrhWth2NNdc3WDU/bne/Opu2RiNb7o/WDz/mcNqO0pKSjqVWrTvBUVrXtmc21sdXWfWnbErd++EM3upcjEol0Nm+3nvUuLd9M4dmKqmNbS7T0nm8LXf/oY1uerNOtE1bh/F5ZkVhl1egnn4l+iyZ0v6wgD4YDthgOMByQoxywZW7a1+HS9owf6HHpT4Yivp//rhze4rICbkghRzlAOSBHOUA5IEc54Ec5XHplBgr39plywI9yIOjcLYd7xUOGqzvs7nAg0FwfDldHW3Nu763rw+F2+rTl9mR498NbPHgkWvFmP70ohwe3TlrxZjK8KwfzsVI8mwyvh4P7j//Jy8nwYTiYj2XzeDIMw80PGBfEJ5Ad8n4sMlz89LlzTElOfs3EkqIYDhQn757KInAYDthiOMBwQI5ygHJAjnKAckCOcoByQI5ygHJAjnKAckCOcoByQI5ygHJAjnKAckCOcoByQI5ygHJAjnKAckCOcoByQO5fjnAtdx7sLcUAAAAASUVORK5CYII=">
+<link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAAFuklEQVR4Xu3dzW8UZRzA8Zltt5o2trLYWpWAkphaUEGyVqz0hYpUE9CmtBw0qCduXjx59eQ/YEzk4KFXWlEjkZQi2xbbWMpbU19IRAImSlvdIi9FSrtrZJNmeWZnd361M7Mzz/dzLAM8+8yP78y+tJib9nUYQC4RtgV2GA4wHJCjHKAckKMcoByQoxygHJCjHKAckKMcoByQoxygHJCjHKAckKMcoByQoxygHJCjHKAckKMcoByQoxygHJArlf8W34wf6LH+3fH9b/u2IAeCuOYlgbms5Nxlw7D9ejEI4pqzBWM47HY5I/+v+iWIa1YEYDicnHsnx3jJyXqcHOOvAAwH/MJwwBbDAYYDcpQDlANylAOUA3IuvrfS/8qMfD3L5/FftyJWas07j1avyHoUXFbAZQVylAOUA3KUA5QDcpQDlANylANBLkfy4GsFT6CTY7zkZD1OjvFXMMqRfx+Lc5eDuGZFMIbDMGz3ujgnI8NubcW85mwuvvG24oKyp9mCuOYlgSkHvMdwIMjPVuAXygHKATnKAcoBOcoBygE5ygHKATnKAcoBOcoBygE5Fz/PEev+Rr4eLMtRV35SL5cVcFmBHOUA5YAc5QDlgBzlAOWAHOUA5YAc5QDlgBzlAOWAHOUA5YAc5QDlgBzlAOWAHOUA5YAc5QDlgJyL39Tko3c/+nDy4oU8C3h/71tv7mh3uMIPPv144NRYnoPfeXXXe517Hf5pAaLpZaVv6FuHJ+mva38nzp5yeHDIaDocl678cfLnH52cy8+Hji8sLjo5Mnw0HQ7DMHoHjxU8nalU6tBwouBhYaXvcCTOnJ65Opv/vCbOnp6eTYb13Bek73Aspha/ODGYf4N6E4XrEmL6DodhGIeGE6lUyu7sXp66cvK8o/uSsNJ6OKZnk0MTZ+xO7cHEsXQ6HdYT74TWw2EY/01Azm36Z37+69FhJzsYYnoNx+rKKuVcjv30w2/TU9YTfGRs5PrcnPL1h6oeDPEoWOk1HLsbm0oiJdm7kE6n+wZzvCBmLcqa6pp4XT3DEVo1q1a1bH5OeXhfjQzN37mT/cWJX385f/mSctieljbTNEO7NbnoVQ7DMLpaX1b24drNm/3j32d/sTcxoBxTFo2+8VKLVpNhGPoNx/N1G9bVPqKc5uzXM67euD4wrr7NtjP+QmVFBcMRcqZp7mluUx7k5MULS9eRL08Mzi8sKAd0t+4I+b5wWcnY3dh0f1mZGo+7b7Wk0um+oePKL9Wve3zjE+sZDi08UF7e3vCi8lCPjI3euDU3Mnnu9z9nyEaGdjekGd2W29Jbt28fHv3O+gy2sryivWGrFv9oLDQdjqfW5rhS9PQfHp2cULZoV2PTfVH1GqQJTYfjbjzUe8ypZDJ175sppml2tap3r/rQdzicPDttqN+4tqZWn2lQ6DscZdHo643N+U+89dZEK/oOR+bV0jyviD8cizU/q77WrhWth2NNdc3WDU/bne/Opu2RiNb7o/WDz/mcNqO0pKSjqVWrTvBUVrXtmc21sdXWfWnbErd++EM3upcjEol0Nm+3nvUuLd9M4dmKqmNbS7T0nm8LXf/oY1uerNOtE1bh/F5ZkVhl1egnn4l+iyZ0v6wgD4YDthgOMByQoxywZW7a1+HS9owf6HHpT4Yivp//rhze4rICbkghRzlAOSBHOUA5IEc54Ec5XHplBgr39plywI9yIOjcLYd7xUOGqzvs7nAg0FwfDldHW3Nu763rw+F2+rTl9mR498NbPHgkWvFmP70ohwe3TlrxZjK8KwfzsVI8mwyvh4P7j//Jy8nwYTiYj2XzeDIMw80PGBfEJ5Ad8n4sMlz89LlzTElOfs3EkqIYDhQn757KInAYDthiOMBwQI5ygHJAjnKAckCOcoByQI5ygHJAjnKAckCOcoByQI5ygHJAjnKAckCOcoByQI5ygHJAjnKAckCOcoByQO5fjnAtdx7sLcUAAAAASUVORK5CYII=">
+<title>Menus de la famille</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FBF7F2; --card:#FFFFFF; --ink:#2B2A28; --muted:#7A746C; --line:#ECE5DB;
+  --green:#2F5D50; --green-soft:#E3EEE9; --sun:#E9A23B; --sun-soft:#FCEFD9;
+  --moon:#5B6BA8; --moon-soft:#E6E9F5; --red:#C4553F; --note:#8A5A9E; --note-soft:#F1E7F5;
+  --r:14px; --shadow:0 1px 3px rgba(40,30,20,.08),0 4px 14px rgba(40,30,20,.05);
+}
+*{box-sizing:border-box}
+html,body{margin:0;background:var(--bg);color:var(--ink);font-family:Nunito,system-ui,sans-serif;font-size:15px}
+button,input,select,textarea{font:inherit;color:inherit}
+button{cursor:pointer;border:none;background:none}
+.app{max-width:760px;margin:0 auto;padding:0 14px 96px}
+header{padding:calc(18px + env(safe-area-inset-top)) 2px 8px;display:flex;align-items:center;justify-content:space-between;gap:8px}
+header h1{margin:0;font-size:22px;font-weight:800;color:var(--green)}
+header .sub{font-size:13px;color:var(--muted)}
+.sync{font-size:12px;color:var(--muted);text-align:right;white-space:nowrap}
+.sync.err{color:var(--red)}
+nav.tabs{position:fixed;left:0;right:0;bottom:0;background:#fff;border-top:1px solid var(--line);display:flex;justify-content:center;z-index:20;padding-bottom:env(safe-area-inset-bottom)}
+nav.tabs .in{display:flex;max-width:760px;width:100%}
+nav.tabs button{flex:1;padding:10px 4px 12px;font-size:12px;font-weight:700;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:3px}
+nav.tabs button svg{width:22px;height:22px}
+nav.tabs button.on{color:var(--green)}
+.card{background:var(--card);border-radius:var(--r);box-shadow:var(--shadow);padding:14px}
+.view{display:none}.view.on{display:block}
+
+/* calendar */
+.monthbar{display:flex;align-items:center;justify-content:space-between;margin:6px 0 10px}
+.monthbar h2{margin:0;font-size:18px;text-transform:capitalize}
+.iconbtn{width:38px;height:38px;border-radius:50%;background:#fff;box-shadow:var(--shadow);display:grid;place-items:center;font-size:18px;color:var(--green)}
+.today-btn{font-size:13px;font-weight:700;color:var(--green);padding:6px 10px;border-radius:20px;background:var(--green-soft)}
+.grid{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.dow{text-align:center;font-size:11px;font-weight:700;color:var(--muted);padding:2px 0 4px;text-transform:uppercase}
+.day{aspect-ratio:1/1.08;border-radius:10px;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:5px 2px 4px;position:relative;border:2px solid transparent;min-width:0}
+.day.out{opacity:.35}
+.day.we{background:#F6F2EC}
+.day .n{font-weight:700;font-size:14px}
+.day.today .n{background:var(--green);color:#fff;border-radius:50%;width:24px;height:24px;display:grid;place-items:center;font-size:13px}
+.day.sel{border-color:var(--green)}
+.day .bars{display:flex;flex-direction:column;gap:3px;width:78%;margin-top:auto}
+.day .bar{height:5px;border-radius:3px;background:var(--line)}
+.day .bar.m.f{background:var(--sun)}
+.day .bar.s.f{background:var(--moon)}
+.day .dot{position:absolute;top:4px;right:5px;width:7px;height:7px;border-radius:50%;background:var(--note)}
+.legend{display:flex;gap:14px;font-size:12px;color:var(--muted);margin:8px 2px 14px;flex-wrap:wrap}
+.legend i{display:inline-block;width:14px;height:5px;border-radius:3px;margin-right:5px;vertical-align:middle}
+
+.dayhead{display:flex;align-items:center;gap:8px;margin:4px 0 10px}
+.dayhead .dh{flex:1;text-align:center;min-width:0}
+.dayhead .dh .tag{display:block;margin-top:1px}
+.navarrow{flex:none;width:36px;height:36px;border-radius:50%;background:#fff;box-shadow:var(--shadow);color:var(--green);font-size:20px;font-weight:700;display:grid;place-items:center;line-height:1}
+.navarrow.sm{width:30px;height:30px;font-size:17px;box-shadow:none;background:#F3EEE7}
+.weekhead{display:flex;align-items:center;gap:8px;margin-bottom:8px}
+.weekhead h4{flex:1;text-align:center;margin:0 !important;font-size:14.5px}
+.swipezone{touch-action:pan-y}
+@keyframes inL{from{opacity:.2;transform:translateX(40px)}to{opacity:1;transform:none}}
+@keyframes inR{from{opacity:.2;transform:translateX(-40px)}to{opacity:1;transform:none}}
+.slide-l{animation:inL .22s ease-out}
+.slide-r{animation:inR .22s ease-out}
+.swipehint{font-size:11.5px;color:var(--muted);text-align:center;margin:-4px 0 8px}
+.dayhead h3{margin:0;font-size:18px}
+.dayhead .dh h3{font-size:17px}
+.dayhead .tag{font-size:12px;color:var(--muted)}
+.slot{border-radius:var(--r);padding:12px 14px;margin-bottom:10px;background:#fff;box-shadow:var(--shadow);border-left:5px solid var(--sun)}
+.slot.soir{border-left-color:var(--moon)}
+.slot .lab{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--sun)}
+.slot.soir .lab{color:var(--moon)}
+.slot .plat{font-size:17px;font-weight:700;margin:3px 0 2px}
+.slot .empty{color:var(--muted);font-style:italic;margin:4px 0}
+.slot .meta{font-size:13px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.slot .ing{font-size:13px;color:var(--muted);margin-top:4px}
+.notebox{margin-top:8px;background:var(--note-soft);color:#5E3A6E;border-radius:10px;padding:7px 10px;font-size:14px;display:flex;gap:6px;align-items:flex-start}
+.actions{display:flex;gap:8px;margin-top:10px;flex-wrap:wrap}
+.btn{padding:8px 12px;border-radius:10px;font-weight:700;font-size:14px;background:var(--green-soft);color:var(--green)}
+.btn.main{background:var(--green);color:#fff}
+.btn.ghost{background:#F3EEE7;color:var(--ink)}
+.btn.danger{background:#F8E3DE;color:var(--red)}
+.btn.note{background:var(--note-soft);color:var(--note)}
+.btn:disabled{opacity:.5}
+.btn.gcal{background:#E8F0FE;color:#1A56C4}
+.progress{font-size:14px;margin-top:10px;white-space:pre-line}
+.progress .ok{color:#2E7D32}.progress .ko{color:var(--red)}
+.weekbox{margin-top:16px}
+.weekbox h4{margin:0 0 8px;font-size:15px}
+.weekrow{display:grid;grid-template-columns:56px 1fr 1fr;gap:6px;align-items:stretch;padding:6px 0;border-top:1px solid var(--line);font-size:13px}
+.weekrow:first-of-type{border-top:none}
+.weekrow.cur .d{color:var(--green)}
+.weekrow .d{font-weight:800;text-transform:capitalize;color:var(--muted);padding-top:2px}
+.weekrow .c{background:#FAF7F3;border-radius:8px;padding:5px 7px;min-height:30px;cursor:pointer}
+.weekrow .c.f.m{background:var(--sun-soft)}
+.weekrow .c.f.s{background:var(--moon-soft)}
+.weekrow .c small{display:block;color:var(--note);font-weight:700}
+.weekrow .c .mut{color:var(--muted)}
+
+/* menus list */
+.filters{display:flex;flex-direction:column;gap:8px;margin-bottom:12px}
+.search{width:100%;padding:11px 14px;border-radius:12px;border:1px solid var(--line);background:#fff;font-size:16px;-webkit-appearance:none;appearance:none}
+.search::-webkit-search-cancel-button{display:none}
+.chips{display:flex;gap:6px;overflow-x:auto;padding-bottom:2px;scrollbar-width:none}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:6px 11px;border-radius:20px;background:#fff;border:1px solid var(--line);font-size:13px;font-weight:600;white-space:nowrap}
+.chip.on{background:var(--green);color:#fff;border-color:var(--green)}
+.count{font-size:13px;color:var(--muted);margin:4px 2px 8px}
+.mcard{background:#fff;border-radius:var(--r);box-shadow:var(--shadow);padding:12px 14px;margin-bottom:8px}
+.mcard .top{display:flex;justify-content:space-between;gap:10px;align-items:flex-start;cursor:pointer}
+.mcard .t{font-weight:700;font-size:16px}
+.mcard .acc{font-size:13px;color:var(--muted)}
+.mcard .tm{flex:none;text-align:right;font-size:13px;font-weight:800}
+.pills{display:flex;gap:5px;flex-wrap:wrap;margin-top:6px}
+.pill{font-size:11.5px;padding:2px 8px;border-radius:10px;background:#F3EEE7;color:#5c564f;font-weight:700}
+.pill.d0{background:#D8F0DD;color:#25683A}.pill.d1{background:#E7F2DE;color:#43712A}.pill.d2{background:#FCEFC8;color:#8A6410}.pill.d3{background:#F9DCCF;color:#9A3E25}
+.pill.mine{background:var(--note-soft);color:var(--note)}
+.pill.bzh{background:#1F2937;color:#fff}
+.pill.fr{background:#E3EAF8;color:#2F4C8C}
+.pill.resto{background:#7A2E2E;color:#fff}
+.pill.world{background:#E6F4F1;color:#1E6B5C}
+.pill.region{background:#FFF0E0;color:#8A4B12}
+.star{flex:none;font-size:22px;line-height:1;color:#C9BFB2;padding:2px 4px}
+.star.on{color:#E9A23B}
+.hist{font-size:12px;color:var(--muted);margin-top:5px}
+.hist.never{color:var(--green);font-weight:700}
+.pen{font-size:15px;padding:2px 4px;margin-left:2px;vertical-align:middle;opacity:.85}
+.notebox .pen{margin-left:auto;flex:none}
+.platrow{display:flex;align-items:center;justify-content:space-between;gap:8px}
+.mcard .more{display:none;margin-top:8px;font-size:14px;border-top:1px dashed var(--line);padding-top:8px}
+.mcard.open .more{display:block}
+.mcard .more p{margin:4px 0}
+.fast{color:#2E7D32}.slow{color:var(--red)}
+
+/* courses */
+.wk{display:flex;align-items:center;justify-content:space-between;margin:6px 0 12px}
+.wk h2{margin:0;font-size:16px;text-align:center}
+.shop li{list-style:none;display:flex;gap:10px;align-items:center;padding:8px 2px;border-bottom:1px solid var(--line)}
+.shop ul{padding:0;margin:0}
+.shop input{width:20px;height:20px;accent-color:var(--green)}
+.shop li.done span{text-decoration:line-through;color:var(--muted)}
+.shop .x{margin-left:auto;font-size:12px;color:var(--muted);font-weight:700}
+.sectitle{font-size:13px;font-weight:800;text-transform:uppercase;color:var(--muted);letter-spacing:.04em;margin:16px 2px 6px}
+
+/* sheet */
+.overlay{position:fixed;top:0;left:0;right:0;height:100%;background:rgba(30,25,20,.38);z-index:40;display:none;align-items:flex-end;justify-content:center}
+.overlay.on{display:flex}
+/* clavier ouvert : la fenêtre se place en haut de l'écran, au-dessus du clavier */
+.overlay.top{align-items:flex-start}
+.overlay.top .sheet{border-radius:0 0 20px 20px;max-height:52vh;padding-bottom:0;box-shadow:0 8px 24px rgba(0,0,0,.18)}
+.overlay.top .sheet.tall{height:52vh}
+.overlay.top .sheet .bd{padding-bottom:12px}
+.overlay.top .tools .toggle,.overlay.top #popt,.overlay.top #pdiff{display:none}
+.overlay.top .sheet .hd{padding:10px 16px 8px}
+.sheet{background:var(--bg);width:100%;max-width:760px;max-height:92%;border-radius:20px 20px 0 0;display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom)}
+.sheet .hd{padding:14px 16px 10px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
+.sheet .hd h3{margin:0;font-size:17px}
+.sheet .bd{padding:12px 16px 16px;overflow-y:auto;-webkit-overflow-scrolling:touch;flex:1;min-height:0}
+.sheet.tall{height:92%}
+.sheet .tools{padding:10px 16px 8px;border-bottom:1px solid var(--line);background:var(--bg)}
+.sheet .tools .toggle{margin:6px 0 4px;font-size:13px}
+.sheet .tools .chips{margin-top:4px}
+.searchwrap{position:relative}
+.searchwrap .search{padding-right:40px;font-size:16px}
+.searchwrap .clr{position:absolute;right:6px;top:50%;transform:translateY(-50%);width:30px;height:30px;border-radius:50%;background:#EFE9E1;color:var(--muted);font-size:16px;display:none;place-items:center}
+.searchwrap.has .clr{display:grid}
+mark{background:#FFE3A3;color:inherit;border-radius:3px;padding:0 1px}
+.pick .ingm{font-size:12px;color:var(--muted);margin-top:2px}
+.rescount{font-size:12.5px;color:var(--muted);margin:2px 2px 8px;font-weight:700}
+.stickybar{position:sticky;top:0;z-index:15;background:var(--bg);padding:8px 0 8px;margin:0 -2px}
+.searchrow{display:flex;gap:8px;align-items:center}
+.searchrow .searchwrap{flex:1}
+.fbtn{flex:none;padding:10px 12px;border-radius:12px;background:#fff;border:1px solid var(--line);font-weight:700;font-size:14px;position:relative}
+.fbtn.on{background:var(--green);color:#fff;border-color:var(--green)}
+.fbtn .badge{position:absolute;top:-6px;right:-6px;background:var(--sun);color:#fff;border-radius:10px;font-size:11px;padding:1px 6px}
+.fpanel{display:none;flex-direction:column;gap:8px;margin-top:8px}
+.fpanel.on{display:flex}
+.activef{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}
+.activef .chip{font-size:12px;padding:4px 9px;background:var(--green-soft);border-color:transparent;color:var(--green)}
+body.kbd nav.tabs{display:none}
+body.kbd .app{padding-bottom:20px}
+.close{font-size:24px;line-height:1;color:var(--muted);padding:4px 8px}
+.pick{display:flex;justify-content:space-between;gap:10px;align-items:center;background:#fff;border-radius:12px;padding:10px 12px;margin-bottom:6px;box-shadow:var(--shadow);width:100%;text-align:left}
+.pick .t{font-weight:700}
+.pick .s{font-size:12.5px;color:var(--muted)}
+label.fl{display:block;font-size:13px;font-weight:700;color:var(--muted);margin:10px 0 4px}
+.inp{width:100%;padding:10px 12px;border-radius:10px;border:1px solid var(--line);background:#fff}
+textarea.inp{min-height:70px;resize:vertical}
+.row2{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:8px}
+.row2 > div{min-width:0}
+input[type=time].inp,input[type=date].inp{min-width:0;max-width:100%;-webkit-appearance:none;appearance:none;text-align:left}
+.toggle{display:flex;align-items:center;gap:8px;font-size:14px;margin:8px 0}
+.toggle input{width:18px;height:18px;accent-color:var(--green)}
+.seg{display:flex;background:#EFE9E1;border-radius:10px;padding:3px}
+.seg button{flex:1;padding:7px;border-radius:8px;font-weight:700;font-size:14px;color:var(--muted)}
+.seg button.on{background:#fff;color:var(--ink);box-shadow:var(--shadow)}
+.quick{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.toast{position:fixed;left:50%;bottom:86px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:9px 16px;border-radius:20px;font-size:14px;z-index:60;opacity:0;transition:opacity .2s;pointer-events:none;max-width:90%}
+.toast.on{opacity:1}
+.hint{font-size:13px;color:var(--muted);margin:2px 2px 10px}
+@media (min-width:600px){ .day{aspect-ratio:1/0.85} }
+</style>
+</head>
+<body>
+<div class="app">
+  <header>
+    <div>
+      <h1>Menus de la famille</h1>
+      <div class="sub">2 adultes · 2 enfants</div>
+    </div>
+    <div class="sync" id="sync">Chargement…</div>
+  </header>
+
+  <!-- CALENDRIER -->
+  <section class="view on" id="v-cal">
+    <div class="monthbar">
+      <button class="iconbtn" id="prevM" aria-label="Mois précédent">‹</button>
+      <div style="display:flex;align-items:center;gap:8px"><h2 id="monthTitle"></h2><button class="today-btn" id="goToday">Aujourd'hui</button></div>
+      <button class="iconbtn" id="nextM" aria-label="Mois suivant">›</button>
+    </div>
+    <div class="grid" id="dows"></div>
+    <div class="grid" id="cal"></div>
+    <div class="legend"><span><i style="background:var(--sun)"></i>Midi prévu</span><span><i style="background:var(--moon)"></i>Soir prévu</span><span><i style="background:var(--note);width:7px;height:7px;border-radius:50%"></i>Note</span></div>
+
+    <div id="dayZone" class="swipezone">
+      <div class="dayhead">
+        <button class="navarrow" id="prevD" aria-label="Jour précédent">‹</button>
+        <div class="dh"><h3 id="dayTitle"></h3><span class="tag" id="dayTag"></span></div>
+        <button class="navarrow" id="nextD" aria-label="Jour suivant">›</button>
+      </div>
+      <div id="slots"></div>
+    </div>
+
+    <div class="card weekbox swipezone" id="weekZone">
+      <div class="weekhead">
+        <button class="navarrow sm" id="prevWk" aria-label="Semaine précédente">‹</button>
+        <h4 id="weekTitle">Cette semaine</h4>
+        <button class="navarrow sm" id="nextWk" aria-label="Semaine suivante">›</button>
+      </div>
+      <div id="weekList"></div>
+      <div class="actions">
+        <button class="btn main" id="fillWeek">🎲 Compléter la semaine</button>
+        <button class="btn danger" id="clearWeek">Vider la semaine</button>
+      </div>
+      <div class="actions"><button class="btn gcal" id="gcalBtn">📆 Google Agenda</button></div>
+      <div class="hint" id="gcalInfo" style="margin-top:6px"></div>
+    </div>
+  </section>
+
+  <!-- MENUS -->
+  <section class="view" id="v-menus">
+    <div class="stickybar filters">
+      <div class="searchrow">
+        <div class="searchwrap" id="qwrap"><input class="search" id="q" placeholder="Plat ou ingrédient…" type="search" enterkeyhint="search" autocomplete="off"><button class="clr" id="qclr" aria-label="Effacer la recherche">✕</button></div>
+        <button class="fbtn" id="fbtn">Filtres</button>
+      </div>
+      <div class="fpanel" id="fpanel">
+        <div class="chips" id="fMoment"></div>
+        <div class="chips" id="fJours"></div>
+        <div class="chips" id="fDiff"></div>
+        <div class="chips" id="fType"></div>
+        <div class="chips" id="fTemps"></div>
+        <div class="chips" id="fOrig"></div>
+        <div class="chips" id="fShow"></div>
+        <div class="chips" id="fTri"></div>
+      </div>
+      <div class="activef" id="activef"></div>
+    </div>
+    <div style="display:flex;justify-content:space-between;align-items:center">
+      <div class="count" id="count"></div>
+      <button class="btn" id="addPlatBtn">+ Ajouter un plat</button>
+    </div>
+    <div id="list" style="margin-top:8px"></div>
+  </section>
+
+  <!-- COURSES -->
+  <section class="view" id="v-shop">
+    <div class="wk">
+      <button class="iconbtn" id="prevW" aria-label="Semaine précédente">‹</button>
+      <h2 id="shopTitle"></h2>
+      <button class="iconbtn" id="nextW" aria-label="Semaine suivante">›</button>
+    </div>
+    <p class="hint">Ingrédients principaux des repas prévus cette semaine. Cochez ce que vous avez déjà.</p>
+    <div class="card shop">
+      <ul id="shopList"></ul>
+      <div class="actions"><button class="btn" id="copyShop">Copier la liste</button></div>
+    </div>
+    <div class="sectitle">Repas de la semaine</div>
+    <div class="card" id="shopMeals" style="font-size:14px"></div>
+  </section>
+</div>
+
+<nav class="tabs"><div class="in">
+  <button data-v="cal" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="16" rx="3"/><path d="M3 10h18M8 3v4M16 3v4"/></svg>Calendrier</button>
+  <button data-v="menus"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M7 3v8a2 2 0 0 0 2 2v8M5 3v5M9 3v5M17 21V3c-2 1-3 4-3 7s1 4 3 4"/></svg>Menus</button>
+  <button data-v="shop"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 4h2l2.5 11h11L21 7H6.2"/><circle cx="9" cy="19.5" r="1.5"/><circle cx="17" cy="19.5" r="1.5"/></svg>Courses</button>
+</div></nav>
+
+<div class="overlay" id="ov"><div class="sheet" role="dialog" aria-modal="true">
+  <div class="hd"><h3 id="shTitle"></h3><button class="close" id="shClose" aria-label="Fermer">×</button></div>
+  <div class="tools" id="shTools" style="display:none"></div>
+  <div class="bd" id="shBody"></div>
+</div></div>
+<div class="toast" id="toast"></div>
+
+<script>
+const BASE = [{"nom": "Croque-monsieur", "acc": "Salade verte ou soupe", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 15, "type": "Viande", "ing": "Pain de mie, jambon, emmental, beurre", "astuce": "Faire 2 par enfant, ils aident à garnir", "orig": "Classique français"}, {"nom": "Omelette au fromage", "acc": "Salade de tomates", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 10, "type": "Œufs", "ing": "Œufs, fromage râpé, ciboulette", "astuce": "Ajouter des restes de légumes"}, {"nom": "Pâtes au beurre et jambon", "acc": "Carottes râpées", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 15, "type": "Viande", "ing": "Pâtes, jambon, beurre, emmental", "astuce": "Le classique qui plaît à tous"}, {"nom": "Œufs à la coque et mouillettes", "acc": "Crudités", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 10, "type": "Œufs", "ing": "Œufs, pain, beurre", "astuce": "Les enfants adorent tremper", "orig": "Classique français"}, {"nom": "Soupe de légumes et tartines gratinées", "acc": "Fromage, fruit", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 15, "type": "Végétarien", "ing": "Soupe en brique ou maison, pain, gruyère", "astuce": "Soupe faite le week-end en avance"}, {"nom": "Poisson pané et purée", "acc": "Haricots verts", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 20, "type": "Poisson", "ing": "Poisson pané surgelé, purée en flocons, lait", "astuce": "Purée améliorée avec beurre et muscade"}, {"nom": "Coquillettes jambon-fromage", "acc": "Tomates cerises", "moment": "Midi ou soir", "jours": "Semaine", "diff": "Très facile", "temps": 15, "type": "Viande", "ing": "Coquillettes, jambon, crème, fromage râpé", "astuce": "Version 'one pot' : tout cuit ensemble"}, {"nom": "Gnocchis poêlés sauce tomate", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 15, "type": "Végétarien", "ing": "Gnocchis frais, sauce tomate, mozzarella", "astuce": "Gratiner 5 min au four", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Wraps poulet crudités", "acc": "Chips de légumes ou maïs", "moment": "Soir", "jours": "Tous", "diff": "Très facile", "temps": 20, "type": "Viande", "ing": "Tortillas, poulet émincé, salade, tomate, fromage", "astuce": "Chacun compose le sien"}, {"nom": "Pizza sur pâte toute prête", "acc": "Salade verte", "moment": "Soir", "jours": "Tous", "diff": "Très facile", "temps": 25, "type": "Viande", "ing": "Pâte à pizza, coulis, jambon, champignons, mozzarella", "astuce": "Les enfants garnissent eux-mêmes"}, {"nom": "Riz cantonais express", "acc": "—", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 15, "type": "Viande", "ing": "Riz de la veille, œufs, petits pois, dés de jambon, sauce soja", "astuce": "Idéal pour finir les restes de riz", "orig": "Cuisine du monde", "pays": "Chine"}, {"nom": "Tartines savoyardes", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 20, "type": "Viande", "ing": "Pain de campagne, pommes de terre cuites, lardons, reblochon", "astuce": "Version rapide de la tartiflette"}, {"nom": "Hot-dogs maison", "acc": "Crudités", "moment": "Soir", "jours": "Week-end", "diff": "Très facile", "temps": 15, "type": "Viande", "ing": "Pains, saucisses de Strasbourg, ketchup, oignons frits", "astuce": "Soir télé en famille"}, {"nom": "Salade de pâtes thon-maïs", "acc": "—", "moment": "Midi ou soir", "jours": "Tous", "diff": "Très facile", "temps": 15, "type": "Poisson", "ing": "Pâtes, thon, maïs, tomates, mayonnaise", "astuce": "Se prépare la veille"}, {"nom": "Steak haché et frites au four", "acc": "Salade", "moment": "Midi ou soir", "jours": "Semaine", "diff": "Très facile", "temps": 25, "type": "Viande", "ing": "Steaks hachés, frites surgelées", "astuce": "Frites au four, moins grasses"}, {"nom": "Quesadillas au fromage", "acc": "Guacamole, salade", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 15, "type": "Végétarien", "ing": "Tortillas, cheddar, haricots rouges, maïs", "astuce": "Couper en triangles pour les enfants", "orig": "Cuisine du monde", "pays": "Mexique"}, {"nom": "Bruschettas variées", "acc": "Salade composée", "moment": "Soir", "jours": "Tous", "diff": "Très facile", "temps": 15, "type": "Végétarien", "ing": "Pain, tomates, mozzarella, jambon cru, basilic", "astuce": "Buffet à garnir", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Croque-tartiflette", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 15, "type": "Viande", "ing": "Pain de mie, reblochon, lardons, pommes de terre", "astuce": "Spécial soir d'hiver"}, {"nom": "Pâtes carbonara", "acc": "Salade verte", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 20, "type": "Viande", "ing": "Pâtes, lardons, œufs, parmesan", "astuce": "Sans crème, plus rapide", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Quiche sans pâte", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 35, "type": "Œufs", "ing": "Œufs, crème, lardons ou thon, fromage", "astuce": "Se mange aussi froid le lendemain midi"}, {"nom": "Poulet curry coco et riz", "acc": "—", "moment": "Midi ou soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Blancs de poulet, lait de coco, curry doux, riz", "astuce": "Curry doux pour les enfants", "orig": "Cuisine du monde", "pays": "Inde"}, {"nom": "Saumon au four et riz", "acc": "Brocolis vapeur", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 25, "type": "Poisson", "ing": "Pavés de saumon, citron, riz, brocolis", "astuce": "Tout cuit en même temps"}, {"nom": "Escalopes de dinde à la crème", "acc": "Pâtes ou riz", "moment": "Midi ou soir", "jours": "Semaine", "diff": "Facile", "temps": 20, "type": "Viande", "ing": "Escalopes, crème, champignons", "astuce": "Sauce aux champignons en option"}, {"nom": "Chili con carne", "acc": "Riz", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 35, "type": "Viande", "ing": "Bœuf haché, haricots rouges, tomates, maïs", "astuce": "Doser les épices pour les enfants", "orig": "Cuisine du monde", "pays": "Mexique"}, {"nom": "Spaghetti bolognaise", "acc": "Salade", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Bœuf haché, sauce tomate, oignon, spaghetti", "astuce": "Faire double dose et congeler", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Croquettes de poulet maison", "acc": "Purée ou frites", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Poulet, chapelure, œuf, corn flakes", "astuce": "Panure aux corn flakes, très croustillant"}, {"nom": "Galettes de sarrasin complètes", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 20, "type": "Œufs", "ing": "Galettes, jambon, œuf, emmental", "astuce": "Version sucrée en dessert", "orig": "Breton"}, {"nom": "Crêpes salées et sucrées", "acc": "Salade", "moment": "Soir", "jours": "Week-end", "diff": "Facile", "temps": 35, "type": "Œufs", "ing": "Farine, œufs, lait, jambon, fromage, Nutella", "astuce": "Soirée crêpes, tout le monde participe", "orig": "Breton"}, {"nom": "Tortilla espagnole", "acc": "Salade", "moment": "Midi ou soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Œufs", "ing": "Œufs, pommes de terre, oignon", "astuce": "Se mange chaude ou froide", "orig": "Cuisine du monde", "pays": "Espagne"}, {"nom": "Gratin de pâtes jambon-béchamel", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Pâtes, jambon, béchamel, gruyère", "astuce": "Utiliser des restes de pâtes"}, {"nom": "Poêlée de légumes et saucisses", "acc": "Pain", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 25, "type": "Viande", "ing": "Saucisses, pommes de terre, courgettes, poivrons", "astuce": "Tout dans une seule poêle"}, {"nom": "Risotto aux champignons", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Riz arborio, champignons, parmesan, bouillon", "astuce": "Ajouter des petits pois pour la couleur", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Tarte tomate-moutarde", "acc": "Salade", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 35, "type": "Végétarien", "ing": "Pâte brisée, tomates, moutarde, gruyère", "astuce": "Moutarde douce pour les enfants", "orig": "Classique français"}, {"nom": "Cabillaud en papillote", "acc": "Riz, carottes", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 25, "type": "Poisson", "ing": "Cabillaud, citron, carottes, courgettes", "astuce": "Pas de vaisselle, papillote jetable"}, {"nom": "Fajitas de bœuf", "acc": "Guacamole, crudités", "moment": "Soir", "jours": "Week-end", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Tortillas, bœuf en lanières, poivrons, oignons", "astuce": "Mettre tout au milieu de la table", "orig": "Cuisine du monde", "pays": "Mexique"}, {"nom": "Bowl poulet-riz-avocat", "acc": "—", "moment": "Midi", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Viande", "ing": "Riz, poulet, avocat, maïs, carottes, sauce soja", "astuce": "Chacun choisit ses ingrédients"}, {"nom": "Cordons bleus et coquillettes", "acc": "Haricots verts", "moment": "Midi", "jours": "Semaine", "diff": "Facile", "temps": 20, "type": "Viande", "ing": "Cordons bleus, coquillettes, haricots verts", "astuce": "Valeur sûre des enfants"}, {"nom": "Lentilles corail au lait de coco (dahl)", "acc": "Riz ou naan", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 25, "type": "Végétarien", "ing": "Lentilles corail, lait de coco, tomates, curry doux", "astuce": "Riche et pas cher", "orig": "Cuisine du monde", "pays": "Inde"}, {"nom": "Clafoutis courgette-feta", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 35, "type": "Végétarien", "ing": "Courgettes, œufs, lait, feta", "astuce": "Fait manger des légumes en douceur"}, {"nom": "Nuggets de poisson maison", "acc": "Purée de patate douce", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Poisson", "ing": "Colin, chapelure, œuf", "astuce": "Sauce tartare maison au yaourt"}, {"nom": "Œufs cocotte jambon-crème", "acc": "Mouillettes, salade", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 20, "type": "Œufs", "ing": "Œufs, crème, jambon, ciboulette", "astuce": "Dans des ramequins individuels"}, {"nom": "Hachis parmentier express", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 35, "type": "Viande", "ing": "Bœuf haché, purée en flocons, gruyère", "astuce": "Avec purée en flocons pour aller vite", "orig": "Classique français"}, {"nom": "Taboulé et poulet froid", "acc": "—", "moment": "Midi", "jours": "Tous", "diff": "Facile", "temps": 20, "type": "Viande", "ing": "Semoule, tomates, concombre, menthe, poulet", "astuce": "Parfait pour les midis d'été"}, {"nom": "Burgers maison", "acc": "Frites au four", "moment": "Midi ou soir", "jours": "Week-end", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Pains burger, steaks hachés, cheddar, salade, tomate", "astuce": "Montage à la carte"}, {"nom": "Salade niçoise", "acc": "Pain", "moment": "Midi", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Poisson", "ing": "Thon, œufs durs, tomates, haricots verts, olives", "astuce": "Repas complet d'été"}, {"nom": "Pâtes au pesto et poulet", "acc": "Tomates cerises", "moment": "Midi", "jours": "Semaine", "diff": "Facile", "temps": 20, "type": "Viande", "ing": "Pâtes, pesto, poulet, parmesan", "astuce": "Pesto doux, sans ail pour les petits"}, {"nom": "Soupe de potiron et croûtons", "acc": "Fromage, pain", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Potiron, pomme de terre, crème, croûtons", "astuce": "Soupe d'automne, se congèle"}, {"nom": "Velouté de carottes au cumin et œufs", "acc": "Tartines", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Carottes, oignon, cumin, œufs mollets", "astuce": "Cumin léger"}, {"nom": "Wok de nouilles aux légumes et poulet", "acc": "—", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 25, "type": "Viande", "ing": "Nouilles chinoises, poulet, légumes surgelés wok, sauce soja", "astuce": "Légumes surgelés pour gagner du temps", "orig": "Cuisine du monde", "pays": "Asie"}, {"nom": "Gratin de gnocchis épinards-mozza", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Gnocchis, épinards, crème, mozzarella", "astuce": "Les épinards passent bien gratinés"}, {"nom": "Lasagnes à la bolognaise", "acc": "Salade", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 75, "type": "Viande", "ing": "Bœuf haché, sauce tomate, béchamel, plaques de lasagnes", "astuce": "Préparer double et congeler une portion", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Poulet rôti et pommes de terre", "acc": "Haricots verts", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 75, "type": "Viande", "ing": "Poulet entier, pommes de terre, thym, ail", "astuce": "Le classique du dimanche midi", "orig": "Classique français"}, {"nom": "Gratin dauphinois et jambon", "acc": "Salade", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 70, "type": "Viande", "ing": "Pommes de terre, crème, lait, ail, jambon blanc", "astuce": "Préparer pendant que le four chauffe", "orig": "Classique français"}, {"nom": "Tartiflette", "acc": "Salade verte, charcuterie", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 50, "type": "Viande", "ing": "Pommes de terre, reblochon, lardons, oignons", "astuce": "Soirée d'hiver", "orig": "Classique français"}, {"nom": "Hachis parmentier maison", "acc": "Salade", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 50, "type": "Viande", "ing": "Bœuf haché, pommes de terre, lait, beurre, gruyère", "astuce": "Se prépare la veille et se réchauffe", "orig": "Classique français"}, {"nom": "Quiche lorraine maison", "acc": "Salade", "moment": "Midi ou soir", "jours": "Week-end", "diff": "Moyen", "temps": 50, "type": "Viande", "ing": "Pâte brisée, lardons, œufs, crème", "astuce": "La pâte maison prend 10 min", "orig": "Classique français"}, {"nom": "Boulettes de bœuf sauce tomate", "acc": "Pâtes ou semoule", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 45, "type": "Viande", "ing": "Bœuf haché, chapelure, œuf, sauce tomate", "astuce": "Les enfants roulent les boulettes"}, {"nom": "Poisson au four façon méditerranéenne", "acc": "Semoule", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 40, "type": "Poisson", "ing": "Dorade ou cabillaud, tomates, olives, citron", "astuce": "Filets sans arêtes pour les enfants"}, {"nom": "Couscous poulet-merguez", "acc": "—", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Semoule, poulet, merguez, carottes, courgettes, pois chiches", "astuce": "Merguez à part pour les enfants", "orig": "Cuisine du monde", "pays": "Maghreb"}, {"nom": "Parmentier de poisson", "acc": "Salade", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 45, "type": "Poisson", "ing": "Cabillaud, purée, crème, fromage", "astuce": "Fait aimer le poisson"}, {"nom": "Endives au jambon", "acc": "Riz ou pain", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 50, "type": "Viande", "ing": "Endives, jambon, béchamel, gruyère", "astuce": "Endives bien cuites, moins amères", "orig": "Classique français"}, {"nom": "Gratin de chou-fleur et brocolis", "acc": "Jambon ou poulet", "moment": "Midi ou soir", "jours": "Tous", "diff": "Moyen", "temps": 45, "type": "Végétarien", "ing": "Chou-fleur, brocolis, béchamel, gruyère", "astuce": "Bien gratiner, les enfants aiment le croustillant"}, {"nom": "Curry de légumes et pois chiches", "acc": "Riz basmati", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 40, "type": "Végétarien", "ing": "Pois chiches, patate douce, épinards, lait de coco", "astuce": "Très doux, se congèle"}, {"nom": "Paëlla express", "acc": "Salade", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 50, "type": "Poisson", "ing": "Riz, poulet, crevettes, chorizo, petits pois, safran", "astuce": "Chorizo doux", "orig": "Cuisine du monde", "pays": "Espagne"}, {"nom": "Raclette", "acc": "Charcuterie, salade", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 40, "type": "Viande", "ing": "Fromage à raclette, pommes de terre, charcuterie", "astuce": "Soirée conviviale, zéro cuisine", "orig": "Classique français"}, {"nom": "Fondue de poulet au bouillon (fondue chinoise)", "acc": "Riz, sauces", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 45, "type": "Viande", "ing": "Poulet, bœuf, légumes, bouillon", "astuce": "Chacun fait cuire ses morceaux"}, {"nom": "Blanquette de veau", "acc": "Riz", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 120, "type": "Viande", "ing": "Veau, carottes, champignons, crème, œuf", "astuce": "Cuisiner le samedi, encore meilleur le dimanche", "orig": "Classique français"}, {"nom": "Bœuf bourguignon", "acc": "Pâtes fraîches ou purée", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 180, "type": "Viande", "ing": "Bœuf à braiser, vin rouge, carottes, lardons, champignons", "astuce": "L'alcool s'évapore à la cuisson", "orig": "Classique français"}, {"nom": "Pot-au-feu", "acc": "Moutarde, cornichons", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 180, "type": "Viande", "ing": "Bœuf, carottes, poireaux, navets, pommes de terre", "astuce": "Bouillon réutilisé en soupe le soir", "orig": "Classique français"}, {"nom": "Gigot d'agneau et flageolets", "acc": "—", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 120, "type": "Viande", "ing": "Gigot, ail, romarin, flageolets", "astuce": "Repas de fête", "orig": "Classique français"}, {"nom": "Lasagnes végétariennes", "acc": "Salade", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 90, "type": "Végétarien", "ing": "Courgettes, aubergines, ricotta, sauce tomate, béchamel", "astuce": "Légumes cachés dans la sauce", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Hamburgers pain maison", "acc": "Frites maison", "moment": "Soir", "jours": "Week-end", "diff": "Élaboré", "temps": 120, "type": "Viande", "ing": "Farine, levure, steaks, cheddar, légumes", "astuce": "Pain fait l'après-midi avec les enfants"}, {"nom": "Pizza pâte maison", "acc": "Salade", "moment": "Soir", "jours": "Week-end", "diff": "Élaboré", "temps": 90, "type": "Viande", "ing": "Farine, levure, coulis, garnitures au choix", "astuce": "Pâte qui lève pendant la sortie du samedi"}, {"nom": "Tajine de poulet citron-olives", "acc": "Semoule", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 90, "type": "Viande", "ing": "Poulet, citrons confits, olives, oignons, épices", "astuce": "Olives à part pour les enfants", "orig": "Cuisine du monde", "pays": "Maroc"}, {"nom": "Saumon en croûte", "acc": "Riz, épinards", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 70, "type": "Poisson", "ing": "Pâte feuilletée, saumon, épinards, fromage frais", "astuce": "Joli plat pour recevoir"}, {"nom": "Couscous royal", "acc": "—", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 120, "type": "Viande", "ing": "Agneau, poulet, merguez, légumes, semoule", "astuce": "Repas de famille", "orig": "Cuisine du monde", "pays": "Maghreb"}, {"nom": "Coq au vin", "acc": "Pâtes fraîches ou pommes vapeur", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 150, "type": "Viande", "ing": "Poulet fermier, vin rouge, lardons, champignons, oignons grelots", "astuce": "L'alcool s'évapore pendant la cuisson", "orig": "Classique français"}, {"nom": "Poule au pot", "acc": "Riz et légumes du bouillon", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 180, "type": "Viande", "ing": "Poule, carottes, poireaux, navets, oignon, bouquet garni", "astuce": "Le bouillon sert de soupe le soir", "orig": "Classique français"}, {"nom": "Cassoulet", "acc": "Salade verte", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 180, "type": "Viande", "ing": "Haricots blancs, confit de canard, saucisse de Toulouse, poitrine, tomate", "astuce": "Version express avec un cassoulet en conserve amélioré", "orig": "Classique français"}, {"nom": "Choucroute garnie", "acc": "Moutarde", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Choucroute, saucisses de Strasbourg et Montbéliard, lard, pommes de terre", "astuce": "Saucisses à part pour les enfants", "orig": "Classique français"}, {"nom": "Navarin d'agneau", "acc": "—", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 120, "type": "Viande", "ing": "Épaule d'agneau, carottes, navets, petits pois, pommes de terre", "astuce": "Plat de printemps", "orig": "Classique français"}, {"nom": "Ratatouille", "acc": "Riz ou œuf au plat", "moment": "Midi ou soir", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Végétarien", "ing": "Courgettes, aubergines, poivrons, tomates, oignon, herbes de Provence", "astuce": "Encore meilleure réchauffée", "orig": "Classique français"}, {"nom": "Soupe à l'oignon gratinée", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 50, "type": "Végétarien", "ing": "Oignons, bouillon, pain, gruyère, beurre", "astuce": "Oignons bien fondus, plus doux", "orig": "Classique français"}, {"nom": "Steak-frites", "acc": "Salade, sauce au poivre", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Steaks (bavette ou entrecôte), pommes de terre ou frites surgelées", "astuce": "Steak haché pour les plus petits", "orig": "Classique français"}, {"nom": "Moules-frites", "acc": "Mayonnaise", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 35, "type": "Poisson", "ing": "Moules, échalotes, vin blanc ou crème, persil, frites", "astuce": "Version à la crème pour les enfants", "orig": "Classique français"}, {"nom": "Lapin à la moutarde", "acc": "Pâtes fraîches ou riz", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 75, "type": "Viande", "ing": "Lapin, moutarde, crème, échalotes, thym", "astuce": "Moutarde douce pour les enfants", "orig": "Classique français"}, {"nom": "Bœuf carottes", "acc": "Pommes vapeur", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 150, "type": "Viande", "ing": "Paleron, carottes, oignons, vin blanc, thym", "astuce": "Se prépare la veille", "orig": "Classique français"}, {"nom": "Petit salé aux lentilles", "acc": "—", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 90, "type": "Viande", "ing": "Petit salé, lentilles vertes, carottes, oignon", "astuce": "Les lentilles plaisent bien aux enfants", "orig": "Classique français"}, {"nom": "Saucisses-lentilles express", "acc": "—", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Saucisses, lentilles cuites, carottes, oignon", "astuce": "Avec des lentilles en bocal", "orig": "Classique français"}, {"nom": "Tomates farcies", "acc": "Riz", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 70, "type": "Viande", "ing": "Grosses tomates, chair à saucisse, oignon, persil, riz", "astuce": "Le riz cuit sous les tomates", "orig": "Classique français"}, {"nom": "Poulet basquaise", "acc": "Riz", "moment": "Midi ou soir", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Poulet, poivrons, tomates, oignons, piment d'Espelette", "astuce": "Piment à part pour les adultes", "orig": "Classique français"}, {"nom": "Brandade de morue parmentière", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 50, "type": "Poisson", "ing": "Morue dessalée ou cabillaud, pommes de terre, lait, ail, huile d'olive", "astuce": "Avec du cabillaud frais, plus doux", "orig": "Classique français"}, {"nom": "Aligot-saucisse", "acc": "Salade", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 45, "type": "Viande", "ing": "Pommes de terre, tome fraîche, crème, ail, saucisses de Toulouse", "astuce": "Les enfants adorent le fromage qui file", "orig": "Classique français"}, {"nom": "Tarte flambée (flammekueche)", "acc": "Salade verte", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Pâte fine, crème épaisse, fromage blanc, lardons, oignons", "astuce": "Version gratinée avec du gruyère", "orig": "Classique français"}, {"nom": "Croque-madame", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 20, "type": "Viande", "ing": "Pain de mie, jambon, emmental, œuf, béchamel", "astuce": "Œuf au plat sur le dessus", "orig": "Classique français"}, {"nom": "Hachis parmentier de canard", "acc": "Salade", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Confit de canard, pommes de terre, échalotes", "astuce": "Version festive du hachis", "orig": "Classique français"}, {"nom": "Kig ha farz", "acc": "—", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 240, "type": "Viande", "ing": "Jarret de porc, plat de côtes, lard, chou, carottes, farine de sarrasin, lait, œuf", "astuce": "Le pot-au-feu breton : farz noir et farz blanc", "orig": "Breton"}, {"nom": "Galette-saucisse", "acc": "Moutarde, salade", "moment": "Soir", "jours": "Tous", "diff": "Très facile", "temps": 15, "type": "Viande", "ing": "Galettes de blé noir, saucisses", "astuce": "La spécialité rennaise, à manger roulée", "orig": "Breton"}, {"nom": "Galettes andouille-pommes", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Viande", "ing": "Galettes de blé noir, andouille de Guémené, pommes, beurre", "astuce": "Pommes poêlées, plus douces pour les enfants", "orig": "Breton"}, {"nom": "Galettes saumon-poireaux", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Poisson", "ing": "Galettes de blé noir, saumon, poireaux, crème", "astuce": "Fondue de poireaux la veille", "orig": "Breton"}, {"nom": "Cotriade", "acc": "Pain grillé", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 60, "type": "Poisson", "ing": "Poissons variés (lieu, maquereau, merlu), pommes de terre, oignons, beurre", "astuce": "La soupe de poissons des pêcheurs bretons", "orig": "Breton"}, {"nom": "Moules marinières", "acc": "Frites ou pain", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Poisson", "ing": "Moules de bouchot, échalotes, vin blanc, persil, beurre", "astuce": "Moules de bouchot de la baie du Mont-Saint-Michel", "orig": "Breton"}, {"nom": "Coquilles Saint-Jacques à la bretonne", "acc": "Riz", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 45, "type": "Poisson", "ing": "Noix de Saint-Jacques, échalotes, champignons, chapelure, beurre, cidre", "astuce": "Repas de fête, se prépare à l'avance", "orig": "Breton"}, {"nom": "Lieu jaune au beurre blanc", "acc": "Pommes vapeur, poireaux", "moment": "Midi ou soir", "jours": "Tous", "diff": "Moyen", "temps": 40, "type": "Poisson", "ing": "Lieu jaune, échalotes, vinaigre, beurre demi-sel", "astuce": "Filets sans arêtes pour les enfants", "orig": "Breton"}, {"nom": "Lotte à l'armoricaine", "acc": "Riz", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 60, "type": "Poisson", "ing": "Lotte, tomates, échalotes, cognac, crème", "astuce": "Sauce adoucie avec de la crème", "orig": "Breton"}, {"nom": "Andouille de Guémené et purée", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Andouille de Guémené, pommes de terre, beurre demi-sel, lait", "astuce": "Tranches fines pour les enfants", "orig": "Breton"}, {"nom": "Poulet au cidre", "acc": "Pommes de terre sautées", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Poulet, cidre brut, crème, pommes, champignons", "astuce": "Le cidre perd son alcool à la cuisson", "orig": "Breton"}, {"nom": "Pommes de terre au lard et oignons (patatez fourn)", "acc": "Salade verte", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 35, "type": "Viande", "ing": "Pommes de terre, lard, oignons, beurre demi-sel", "astuce": "Plat simple et réconfortant", "orig": "Breton"}, {"nom": "Sardines grillées", "acc": "Pommes de terre et salade", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 20, "type": "Poisson", "ing": "Sardines fraîches, gros sel, citron, beurre demi-sel", "astuce": "En été, au barbecue", "orig": "Breton"}, {"nom": "Entrecôte sauce béarnaise", "acc": "Frites maison, salade", "moment": "Midi ou soir", "jours": "Week-end", "diff": "Moyen", "temps": 40, "type": "Viande", "ing": "Entrecôtes, beurre, échalote, estragon, jaunes d'œufs, vinaigre, pommes de terre", "astuce": "Béarnaise en pot pour aller plus vite", "orig": "Restaurant"}, {"nom": "Bavette à l'échalote", "acc": "Frites ou pommes sautées", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Viande", "ing": "Bavettes, échalotes, beurre, vinaigre de vin, persil", "astuce": "Viande tranchée finement pour les enfants", "orig": "Restaurant"}, {"nom": "Onglet de bœuf, sauce au poivre", "acc": "Gratin dauphinois", "moment": "Midi ou soir", "jours": "Week-end", "diff": "Moyen", "temps": 30, "type": "Viande", "ing": "Onglets, poivre concassé, crème, cognac, échalote", "astuce": "Sauce sans poivre à part pour les enfants", "orig": "Restaurant"}, {"nom": "Pavé de bœuf sauce roquefort", "acc": "Pommes grenaille, haricots verts", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 30, "type": "Viande", "ing": "Pavés de rumsteck, roquefort, crème, beurre", "astuce": "Sauce à part, tout le monde n'aime pas le bleu", "orig": "Restaurant"}, {"nom": "Côte de bœuf grillée", "acc": "Frites, salade, béarnaise", "moment": "Midi ou soir", "jours": "Week-end", "diff": "Moyen", "temps": 45, "type": "Viande", "ing": "Côte de bœuf (1,2 kg), fleur de sel, beurre, thym", "astuce": "À sortir du frigo 1 h avant, repos 10 min", "orig": "Restaurant"}, {"nom": "Tartare de bœuf", "acc": "Frites, salade", "moment": "Midi ou soir", "jours": "Week-end", "diff": "Facile", "temps": 20, "type": "Viande", "ing": "Bœuf haché du boucher, câpres, cornichons, échalote, jaune d'œuf, moutarde", "astuce": "Steak haché bien cuit pour les enfants (viande crue déconseillée aux petits)", "orig": "Restaurant"}, {"nom": "Carpaccio de bœuf, roquette et parmesan", "acc": "Frites", "moment": "Midi", "jours": "Week-end", "diff": "Facile", "temps": 20, "type": "Viande", "ing": "Bœuf en fines tranches, roquette, parmesan, huile d'olive, citron", "astuce": "Viande crue déconseillée aux jeunes enfants", "orig": "Restaurant"}, {"nom": "Magret de canard au miel", "acc": "Pommes sarladaises", "moment": "Midi ou soir", "jours": "Week-end", "diff": "Moyen", "temps": 40, "type": "Viande", "ing": "Magrets, miel, vinaigre balsamique, pommes de terre, ail, persil", "astuce": "Bien dégraisser, la graisse sert aux pommes de terre", "orig": "Restaurant"}, {"nom": "Confit de canard et pommes sarladaises", "acc": "Salade aux noix", "moment": "Midi", "jours": "Week-end", "diff": "Facile", "temps": 35, "type": "Viande", "ing": "Cuisses de canard confites, pommes de terre, ail, persil", "astuce": "Le confit en bocal : facile et très bon", "orig": "Restaurant"}, {"nom": "Filet mignon de porc à la moutarde", "acc": "Tagliatelles", "moment": "Midi ou soir", "jours": "Tous", "diff": "Moyen", "temps": 40, "type": "Viande", "ing": "Filet mignon, moutarde à l'ancienne, crème, champignons", "astuce": "Moutarde douce pour les enfants", "orig": "Restaurant"}, {"nom": "Souris d'agneau confite", "acc": "Semoule ou purée", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 180, "type": "Viande", "ing": "Souris d'agneau, ail, romarin, tomates, vin blanc", "astuce": "Viande fondante qui se détache seule", "orig": "Restaurant"}, {"nom": "Joue de bœuf braisée", "acc": "Purée maison", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 180, "type": "Viande", "ing": "Joues de bœuf, vin rouge, carottes, oignons, lardons", "astuce": "Parfaite à préparer la veille", "orig": "Restaurant"}, {"nom": "Suprême de volaille à la crème de morilles", "acc": "Riz pilaf", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 50, "type": "Viande", "ing": "Suprêmes de volaille, morilles séchées, crème, échalote, vin jaune ou blanc", "astuce": "Champignons de Paris pour une version économique", "orig": "Restaurant"}, {"nom": "Escalope milanaise", "acc": "Spaghetti sauce tomate", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Escalopes de veau ou de dinde, chapelure, œuf, parmesan, citron", "astuce": "Un succès assuré avec les enfants", "orig": "Restaurant"}, {"nom": "Escalope de veau à la normande", "acc": "Riz ou tagliatelles", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Escalopes de veau, champignons, crème, cidre ou vin blanc", "astuce": "Version dinde, moins chère", "orig": "Restaurant"}, {"nom": "Côtes de porc sauce charcutière", "acc": "Purée", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Côtes de porc, cornichons, oignons, moutarde, vin blanc", "astuce": "Cornichons à part pour les enfants", "orig": "Restaurant"}, {"nom": "Andouillette sauce moutarde", "acc": "Frites", "moment": "Midi", "jours": "Week-end", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Andouillettes AAAAA, moutarde, crème, échalote", "astuce": "Plutôt pour les adultes : saucisse pour les enfants", "orig": "Restaurant"}, {"nom": "Tournedos Rossini", "acc": "Pommes Anna, haricots verts", "moment": "Soir", "jours": "Week-end", "diff": "Élaboré", "temps": 50, "type": "Viande", "ing": "Tournedos de bœuf, foie gras, pain de mie, sauce au porto", "astuce": "Le grand classique des repas de fête", "orig": "Restaurant"}, {"nom": "Travers de porc caramélisés (ribs)", "acc": "Potatoes, salade de chou", "moment": "Midi ou soir", "jours": "Week-end", "diff": "Moyen", "temps": 90, "type": "Viande", "ing": "Travers de porc, miel, sauce soja, ketchup, ail", "astuce": "Les enfants mangent avec les doigts", "orig": "Restaurant"}, {"nom": "Brochettes de bœuf marinées", "acc": "Riz, poivrons grillés", "moment": "Midi ou soir", "jours": "Week-end", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Bœuf en cubes, poivrons, oignons, huile d'olive, herbes", "astuce": "Au barbecue ou à la plancha", "orig": "Restaurant"}, {"nom": "Rôti de porc au four", "acc": "Pommes de terre, haricots verts", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 80, "type": "Viande", "ing": "Rôti de porc, ail, thym, moutarde", "astuce": "Les restes en sandwich le lendemain", "orig": "Restaurant"}, {"nom": "Poulet rôti au citron et thym, jus maison", "acc": "Frites maison", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 75, "type": "Viande", "ing": "Poulet fermier, citron, thym, ail, beurre", "astuce": "Le poulet de la rôtisserie du marché", "orig": "Restaurant"}, {"nom": "Osso buco", "acc": "Risotto ou pâtes", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 120, "type": "Viande", "ing": "Jarret de veau, tomates, carottes, céleri, vin blanc, zeste de citron", "astuce": "Viande fondante, se prépare la veille", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Spaghetti alle vongole", "acc": "Salade", "moment": "Soir", "jours": "Week-end", "diff": "Facile", "temps": 25, "type": "Poisson", "ing": "Spaghetti, palourdes, ail, vin blanc, persil, huile d'olive", "astuce": "Bien rincer les palourdes", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Saltimbocca alla romana", "acc": "Pâtes au beurre", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 20, "type": "Viande", "ing": "Escalopes de veau, jambon cru, sauge, vin blanc, beurre", "astuce": "Version dinde, moins chère", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Aubergines à la parmigiana", "acc": "Salade, pain", "moment": "Midi ou soir", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Végétarien", "ing": "Aubergines, sauce tomate, mozzarella, parmesan, basilic", "astuce": "Aubergines au four plutôt que frites", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Calzone jambon-champignons", "acc": "Salade", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 40, "type": "Viande", "ing": "Pâte à pizza, jambon, champignons, mozzarella, sauce tomate", "astuce": "Chacun garnit son chausson", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Moussaka", "acc": "Salade", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 90, "type": "Viande", "ing": "Aubergines, agneau ou bœuf haché, tomates, béchamel, cannelle", "astuce": "Se congèle très bien", "orig": "Cuisine du monde", "pays": "Grèce"}, {"nom": "Souvlaki pita", "acc": "Tzatziki, frites", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Porc ou poulet mariné, pains pita, tomates, oignon, tzatziki", "astuce": "Chacun garnit sa pita", "orig": "Cuisine du monde", "pays": "Grèce"}, {"nom": "Falafels et houmous", "acc": "Pains pita, crudités", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 40, "type": "Végétarien", "ing": "Pois chiches, persil, coriandre, cumin, ail, tahini", "astuce": "Falafels du commerce pour aller vite", "orig": "Cuisine du monde", "pays": "Liban"}, {"nom": "Harira", "acc": "Dattes, pain", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Agneau, lentilles, pois chiches, tomates, coriandre, céleri", "astuce": "Soupe complète marocaine", "orig": "Cuisine du monde", "pays": "Maroc"}, {"nom": "Pastilla au poulet", "acc": "Salade verte", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 90, "type": "Viande", "ing": "Poulet, feuilles de brick, amandes, œufs, cannelle, sucre glace", "astuce": "Le sucré-salé plaît souvent aux enfants", "orig": "Cuisine du monde", "pays": "Maroc"}, {"nom": "Tajine de kefta aux œufs", "acc": "Pain ou semoule", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 35, "type": "Viande", "ing": "Bœuf haché, tomates, œufs, cumin, coriandre", "astuce": "Boulettes à rouler avec les enfants", "orig": "Cuisine du monde", "pays": "Maroc"}, {"nom": "Butter chicken", "acc": "Riz basmati, naans", "moment": "Midi ou soir", "jours": "Tous", "diff": "Moyen", "temps": 45, "type": "Viande", "ing": "Poulet, yaourt, tomates, beurre, crème, garam masala", "astuce": "Très doux, parfait pour les enfants", "orig": "Cuisine du monde", "pays": "Inde"}, {"nom": "Biryani au poulet", "acc": "Raïta (yaourt-concombre)", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Riz basmati, poulet, oignons frits, yaourt, épices", "astuce": "Plat complet en une cocotte", "orig": "Cuisine du monde", "pays": "Inde"}, {"nom": "Pad thaï", "acc": "—", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Viande", "ing": "Nouilles de riz, crevettes ou poulet, œufs, pousses de soja, cacahuètes, citron vert", "astuce": "Sauce sans piment pour les enfants", "orig": "Cuisine du monde", "pays": "Thaïlande"}, {"nom": "Curry vert thaï au poulet", "acc": "Riz thaï", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Poulet, pâte de curry vert, lait de coco, courgettes, basilic thaï", "astuce": "Peu de pâte de curry, plus de coco", "orig": "Cuisine du monde", "pays": "Thaïlande"}, {"nom": "Bo bun", "acc": "—", "moment": "Midi ou soir", "jours": "Tous", "diff": "Moyen", "temps": 40, "type": "Viande", "ing": "Vermicelles de riz, bœuf, salade, carottes, nems, cacahuètes, sauce nuoc-mâm", "astuce": "Nems surgelés pour gagner du temps", "orig": "Cuisine du monde", "pays": "Vietnam"}, {"nom": "Phở au bœuf", "acc": "—", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Bouillon de bœuf, nouilles de riz, bœuf émincé, anis étoilé, coriandre, citron vert", "astuce": "Bouillon fait la veille", "orig": "Cuisine du monde", "pays": "Vietnam"}, {"nom": "Porc au caramel", "acc": "Riz", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 40, "type": "Viande", "ing": "Échine de porc, sucre, sauce soja, nuoc-mâm, ail, oignon", "astuce": "Le sucré plaît aux enfants", "orig": "Cuisine du monde", "pays": "Vietnam"}, {"nom": "Poulet aigre-doux", "acc": "Riz", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Poulet, ananas, poivrons, ketchup, vinaigre, sauce soja", "astuce": "Comme au restaurant chinois", "orig": "Cuisine du monde", "pays": "Chine"}, {"nom": "Gyozas maison", "acc": "Riz, sauce soja", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 50, "type": "Viande", "ing": "Feuilles à raviolis, porc haché, chou, ciboulette, gingembre", "astuce": "Les enfants aiment les plier", "orig": "Cuisine du monde", "pays": "Japon"}, {"nom": "Poulet teriyaki", "acc": "Riz, brocolis", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Viande", "ing": "Hauts de cuisse de poulet, sauce soja, mirin, miel, sésame", "astuce": "Sauce sucrée-salée appréciée des enfants", "orig": "Cuisine du monde", "pays": "Japon"}, {"nom": "Ramen au poulet", "acc": "—", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 45, "type": "Viande", "ing": "Nouilles ramen, bouillon de poulet, œufs mollets, poulet, maïs, oignon nouveau", "astuce": "Chacun garnit son bol", "orig": "Cuisine du monde", "pays": "Japon"}, {"nom": "Chirashi au saumon", "acc": "Soupe miso", "moment": "Soir", "jours": "Week-end", "diff": "Facile", "temps": 30, "type": "Poisson", "ing": "Riz vinaigré, saumon frais, avocat, concombre, sésame", "astuce": "Saumon cuit pour les plus petits", "orig": "Cuisine du monde", "pays": "Japon"}, {"nom": "Bibimbap", "acc": "—", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 40, "type": "Viande", "ing": "Riz, bœuf haché, épinards, carottes, œuf, sauce gochujang", "astuce": "Sauce pimentée à part", "orig": "Cuisine du monde", "pays": "Corée"}, {"nom": "Tacos au bœuf", "acc": "Guacamole, salsa", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Viande", "ing": "Tortillas de maïs, bœuf haché, épices tex-mex, salade, tomates, cheddar", "astuce": "Chacun compose les siens", "orig": "Cuisine du monde", "pays": "Mexique"}, {"nom": "Burritos au poulet", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Grandes tortillas, poulet, riz, haricots rouges, maïs, fromage", "astuce": "Se préparent à l'avance pour le lendemain midi", "orig": "Cuisine du monde", "pays": "Mexique"}, {"nom": "Enchiladas gratinées", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 45, "type": "Viande", "ing": "Tortillas, poulet effiloché, sauce tomate, haricots, cheddar", "astuce": "Gratin que les enfants adorent", "orig": "Cuisine du monde", "pays": "Mexique"}, {"nom": "Mac and cheese", "acc": "Salade verte", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Macaronis, cheddar, lait, beurre, farine", "astuce": "Le plat réconfort des enfants", "orig": "Cuisine du monde", "pays": "États-Unis"}, {"nom": "Pulled pork en burger", "acc": "Coleslaw, potatoes", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 240, "type": "Viande", "ing": "Échine de porc, sauce barbecue, pains burger, chou", "astuce": "Cuisson longue au four, se fait seul", "orig": "Cuisine du monde", "pays": "États-Unis"}, {"nom": "Goulash", "acc": "Pommes vapeur ou pâtes", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 120, "type": "Viande", "ing": "Bœuf, oignons, paprika doux, poivrons, tomates", "astuce": "Paprika doux, pas fort", "orig": "Cuisine du monde", "pays": "Hongrie"}, {"nom": "Fish and chips", "acc": "Petits pois, sauce tartare", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 40, "type": "Poisson", "ing": "Cabillaud, farine, bière ou eau gazeuse, pommes de terre", "astuce": "Pâte à l'eau gazeuse pour les enfants", "orig": "Cuisine du monde", "pays": "Royaume-Uni"}, {"nom": "Poulet yassa", "acc": "Riz blanc", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Poulet, oignons, citrons, moutarde, olives", "astuce": "Moins de citron pour les enfants", "orig": "Cuisine du monde", "pays": "Sénégal"}, {"nom": "Mafé de poulet", "acc": "Riz", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Poulet, pâte d'arachide, tomates, patates douces, carottes", "astuce": "Sauce douce à la cacahuète", "orig": "Cuisine du monde", "pays": "Afrique de l'Ouest"}, {"nom": "Colombo de poulet", "acc": "Riz", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Poulet, poudre de colombo, pommes de terre, courgettes, lait de coco", "astuce": "Doux et parfumé", "orig": "Cuisine du monde", "pays": "Antilles"}, {"nom": "Accras de morue et riz créole", "acc": "Salade", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 45, "type": "Poisson", "ing": "Morue, farine, ciboulette, piment doux, riz, haricots rouges", "astuce": "Accras à l'apéritif ou en plat", "orig": "Cuisine du monde", "pays": "Antilles"}, {"nom": "Pavé de saumon à l'oseille", "acc": "Riz", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Poisson", "ing": "Pavés de saumon, oseille, crème, échalote", "astuce": "Épinards à la place de l'oseille"}, {"nom": "Truite aux amandes", "acc": "Pommes vapeur", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Poisson", "ing": "Filets de truite, amandes effilées, beurre, citron", "astuce": "Filets sans arêtes"}, {"nom": "Merlu sauce vierge", "acc": "Riz ou semoule", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Poisson", "ing": "Merlu, tomates, basilic, huile d'olive, citron", "astuce": "Léger et coloré"}, {"nom": "Cabillaud en croûte de chorizo", "acc": "Purée", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 35, "type": "Poisson", "ing": "Dos de cabillaud, chorizo, chapelure, beurre", "astuce": "Le chorizo fait aimer le poisson"}, {"nom": "Thon mi-cuit au sésame", "acc": "Riz, légumes sautés", "moment": "Soir", "jours": "Week-end", "diff": "Facile", "temps": 20, "type": "Poisson", "ing": "Thon frais, graines de sésame, sauce soja, citron vert", "astuce": "Bien cuit pour les enfants"}, {"nom": "Crevettes à l'ail et au persil", "acc": "Riz ou pâtes", "moment": "Soir", "jours": "Tous", "diff": "Très facile", "temps": 15, "type": "Poisson", "ing": "Crevettes décortiquées, ail, persil, beurre, citron", "astuce": "Prêt en 15 minutes"}, {"nom": "Gratin de fruits de mer", "acc": "Riz", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 50, "type": "Poisson", "ing": "Mélange de fruits de mer, poisson blanc, béchamel, gruyère, champignons", "astuce": "Mélange surgelé pour aller vite"}, {"nom": "Tartare de saumon à l'avocat", "acc": "Salade, pain grillé", "moment": "Soir", "jours": "Week-end", "diff": "Facile", "temps": 20, "type": "Poisson", "ing": "Saumon frais extra-frais, avocat, citron vert, ciboulette", "astuce": "Poisson cru déconseillé aux jeunes enfants"}, {"nom": "Maquereaux au four à la moutarde", "acc": "Pommes de terre", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Poisson", "ing": "Filets de maquereau, moutarde, citron, thym", "astuce": "Poisson riche en oméga-3, pas cher"}, {"nom": "Sole meunière", "acc": "Pommes vapeur", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 30, "type": "Poisson", "ing": "Soles, farine, beurre, citron, persil", "astuce": "Le grand classique du poisson"}, {"nom": "Calamars à la romaine", "acc": "Riz, sauce tartare", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 30, "type": "Poisson", "ing": "Anneaux d'encornet, farine, œuf, eau gazeuse, citron", "astuce": "Croustillants, comme des frites"}, {"nom": "Risotto aux crevettes", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 35, "type": "Poisson", "ing": "Riz arborio, crevettes, bouillon, parmesan, citron", "astuce": "Ajouter des petits pois"}, {"nom": "Pâtes au saumon fumé", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Très facile", "temps": 15, "type": "Poisson", "ing": "Pâtes, saumon fumé, crème, aneth, citron", "astuce": "Repas express du soir"}, {"nom": "Poisson blanc au lait de coco", "acc": "Riz", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Poisson", "ing": "Cabillaud ou colin, lait de coco, curry doux, tomates", "astuce": "Sauce douce qui plaît aux enfants"}, {"nom": "Lasagnes saumon-épinards", "acc": "Salade", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 60, "type": "Poisson", "ing": "Saumon, épinards, béchamel, plaques de lasagnes, parmesan", "astuce": "Saumon en conserve possible"}, {"nom": "Chili sin carne", "acc": "Riz ou nachos", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 35, "type": "Végétarien", "ing": "Haricots rouges, lentilles, maïs, tomates, poivrons, épices", "astuce": "Doser les épices pour les enfants"}, {"nom": "Burger végétarien aux pois chiches", "acc": "Frites au four", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 40, "type": "Végétarien", "ing": "Pois chiches, flocons d'avoine, oignon, cumin, pains burger, cheddar", "astuce": "Galettes à préparer la veille"}, {"nom": "Shakshuka", "acc": "Pain", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Œufs", "ing": "Œufs, tomates, poivrons, oignon, cumin, paprika", "astuce": "Plat complet dans une poêle"}, {"nom": "Tarte poireaux-chèvre", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 40, "type": "Végétarien", "ing": "Pâte brisée, poireaux, chèvre, œufs, crème", "astuce": "Fondue de poireaux bien cuite, plus douce"}, {"nom": "Galettes de courgettes", "acc": "Riz, yaourt aux herbes", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Courgettes, œufs, farine, feta, menthe", "astuce": "Bonne façon de faire manger des courgettes"}, {"nom": "Gnocchis à la courge et sauge", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Gnocchis, courge butternut, beurre, sauge, parmesan", "astuce": "Courge rôtie au four"}, {"nom": "Polenta crémeuse aux champignons", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Polenta, champignons, parmesan, crème, ail", "astuce": "Polenta instantanée : 5 minutes"}, {"nom": "Hachis parmentier végétarien aux lentilles", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 50, "type": "Végétarien", "ing": "Lentilles, carottes, oignons, pommes de terre, gruyère", "astuce": "Même texture que le classique"}, {"nom": "Cannellonis ricotta-épinards", "acc": "Salade", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 60, "type": "Végétarien", "ing": "Cannellonis, ricotta, épinards, sauce tomate, mozzarella", "astuce": "Se prépare à l'avance"}, {"nom": "Bolognaise de lentilles", "acc": "—", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 35, "type": "Végétarien", "ing": "Lentilles corail, sauce tomate, carottes, oignon, spaghetti", "astuce": "Les enfants ne voient pas la différence"}, {"nom": "Buddha bowl", "acc": "—", "moment": "Midi", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Quinoa, pois chiches rôtis, avocat, carottes, chou rouge, sauce tahini", "astuce": "Chacun compose son bol"}, {"nom": "Tofu sauté aux légumes et nouilles", "acc": "—", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Végétarien", "ing": "Tofu ferme, nouilles, brocolis, carottes, sauce soja, sésame", "astuce": "Tofu bien doré, plus croustillant"}, {"nom": "Courge butternut farcie", "acc": "Salade", "moment": "Soir", "jours": "Week-end", "diff": "Moyen", "temps": 60, "type": "Végétarien", "ing": "Butternut, quinoa, feta, épinards, noix", "astuce": "Joli plat d'automne"}, {"nom": "Tian de légumes et riz", "acc": "—", "moment": "Midi ou soir", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Végétarien", "ing": "Courgettes, tomates, aubergines, oignons, huile d'olive, riz", "astuce": "Se mange chaud ou froid"}, {"nom": "Pâtes aux légumes du soleil", "acc": "Parmesan", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Végétarien", "ing": "Pâtes, courgettes, poivrons, tomates cerises, basilic, mozzarella", "astuce": "Repas d'été rapide"}, {"nom": "Croquettes de pommes de terre et légumes", "acc": "Salade", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Pommes de terre, carottes, petits pois, fromage râpé, chapelure", "astuce": "Avec les restes de purée"}, {"nom": "Curry de lentilles et patate douce", "acc": "Riz basmati", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 35, "type": "Végétarien", "ing": "Lentilles, patate douce, lait de coco, épinards, curry doux", "astuce": "Très doux et rassasiant"}, {"nom": "Pizza blanche aux légumes grillés", "acc": "Salade", "moment": "Soir", "jours": "Week-end", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Pâte à pizza, crème, mozzarella, courgettes, poivrons, champignons", "astuce": "Les enfants choisissent leurs légumes"}, {"nom": "Garbure", "acc": "Pain de campagne", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 150, "type": "Viande", "ing": "Chou, haricots blancs, confit de canard, jambon de Bayonne, pommes de terre, carottes", "astuce": "Soupe-repas du Sud-Ouest", "orig": "Régional", "pays": "Sud-Ouest"}, {"nom": "Axoa de veau", "acc": "Pommes vapeur ou riz", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Veau haché ou en dés, piments doux, poivrons, oignons, piment d'Espelette", "astuce": "Piment d'Espelette à part", "orig": "Régional", "pays": "Pays basque"}, {"nom": "Piperade et œufs", "acc": "Jambon de Bayonne, pain", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Œufs", "ing": "Poivrons, tomates, oignons, ail, œufs, piment d'Espelette", "astuce": "Doux pour les enfants", "orig": "Régional", "pays": "Pays basque"}, {"nom": "Baeckeoffe", "acc": "Salade verte", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 240, "type": "Viande", "ing": "Porc, bœuf, agneau, pommes de terre, oignons, poireaux, vin blanc", "astuce": "Marinade la veille, cuit seul au four", "orig": "Régional", "pays": "Alsace"}, {"nom": "Fleischnacka", "acc": "Salade verte", "moment": "Midi", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Pâtes fraîches, viande de pot-au-feu, oignons, persil, bouillon", "astuce": "Les « escargots de viande » alsaciens", "orig": "Régional", "pays": "Alsace"}, {"nom": "Daube provençale", "acc": "Pâtes fraîches", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 180, "type": "Viande", "ing": "Bœuf, vin rouge, carottes, olives, zeste d'orange, herbes de Provence", "astuce": "Encore meilleure le lendemain", "orig": "Régional", "pays": "Provence"}, {"nom": "Soupe au pistou", "acc": "Pain", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 60, "type": "Végétarien", "ing": "Haricots blancs et verts, courgettes, pommes de terre, pâtes, basilic, ail, parmesan", "astuce": "Soupe complète d'été", "orig": "Régional", "pays": "Provence"}, {"nom": "Pissaladière", "acc": "Salade verte", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 50, "type": "Végétarien", "ing": "Pâte à pain, oignons, olives noires, anchois", "astuce": "Anchois sur une moitié seulement", "orig": "Régional", "pays": "Nice"}, {"nom": "Quenelles sauce Nantua", "acc": "Riz", "moment": "Midi", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Poisson", "ing": "Quenelles de brochet, sauce Nantua ou sauce tomate", "astuce": "Quenelles nature et sauce tomate pour les enfants", "orig": "Régional", "pays": "Lyon"}, {"nom": "Croziflette", "acc": "Salade verte", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 40, "type": "Viande", "ing": "Crozets, reblochon, lardons, oignons, crème", "astuce": "La tartiflette version pâtes", "orig": "Régional", "pays": "Savoie"}, {"nom": "Fondue savoyarde", "acc": "Charcuterie, salade", "moment": "Soir", "jours": "Week-end", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Beaufort, comté, emmental de Savoie, vin blanc, pain, ail", "astuce": "Version sans vin avec du bouillon pour les enfants", "orig": "Régional", "pays": "Savoie"}, {"nom": "Diots au vin blanc", "acc": "Polenta ou crozets", "moment": "Midi", "jours": "Tous", "diff": "Facile", "temps": 40, "type": "Viande", "ing": "Diots de Savoie, oignons, vin blanc, laurier", "astuce": "L'alcool s'évapore à la cuisson", "orig": "Régional", "pays": "Savoie"}, {"nom": "Carbonade flamande", "acc": "Frites", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 180, "type": "Viande", "ing": "Bœuf, bière brune, oignons, pain d'épices, moutarde, cassonade", "astuce": "Bière cuite longtemps, sans alcool à la fin", "orig": "Régional", "pays": "Nord"}, {"nom": "Welsh", "acc": "Frites, salade", "moment": "Soir", "jours": "Week-end", "diff": "Facile", "temps": 25, "type": "Viande", "ing": "Cheddar, bière, pain de mie, jambon, moutarde, œuf", "astuce": "Version sans bière avec du lait", "orig": "Régional", "pays": "Nord"}, {"nom": "Tarte au maroilles", "acc": "Salade verte", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 35, "type": "Végétarien", "ing": "Pâte brisée, maroilles, crème, œuf", "astuce": "Fromage fort : moitié avec emmental", "orig": "Régional", "pays": "Nord"}, {"nom": "Truffade", "acc": "Jambon cru, salade", "moment": "Soir", "jours": "Tous", "diff": "Moyen", "temps": 40, "type": "Végétarien", "ing": "Pommes de terre, tome fraîche, ail, lard", "astuce": "Le fromage qui file plaît aux enfants", "orig": "Régional", "pays": "Auvergne"}, {"nom": "Potée auvergnate", "acc": "—", "moment": "Midi", "jours": "Week-end", "diff": "Élaboré", "temps": 150, "type": "Viande", "ing": "Palette, saucisses, lard, chou, carottes, navets, pommes de terre", "astuce": "Repas complet d'hiver", "orig": "Régional", "pays": "Auvergne"}, {"nom": "Ficelle picarde", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 35, "type": "Viande", "ing": "Crêpes, jambon, champignons, crème, gruyère", "astuce": "Crêpes roulées gratinées", "orig": "Régional", "pays": "Picardie"}, {"nom": "Poulet vallée d'Auge", "acc": "Riz ou pommes sautées", "moment": "Midi", "jours": "Week-end", "diff": "Moyen", "temps": 60, "type": "Viande", "ing": "Poulet, pommes, champignons, crème, cidre", "astuce": "Le cidre perd son alcool à la cuisson", "orig": "Régional", "pays": "Normandie"}, {"nom": "Tarte au camembert et aux pommes", "acc": "Salade", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 35, "type": "Végétarien", "ing": "Pâte feuilletée, camembert, pommes, crème", "astuce": "Sucré-salé qui surprend agréablement", "orig": "Régional", "pays": "Normandie"}, {"nom": "Velouté poireaux-pommes de terre", "acc": "Tartines, fromage", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Poireaux, pommes de terre, bouillon, crème", "astuce": "Mixé, les enfants ne voient pas les poireaux"}, {"nom": "Soupe de lentilles corail", "acc": "Pain naan", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 30, "type": "Végétarien", "ing": "Lentilles corail, carottes, tomates, cumin, lait de coco", "astuce": "Soupe rassasiante"}, {"nom": "Velouté de champignons", "acc": "Croûtons, omelette", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 25, "type": "Végétarien", "ing": "Champignons de Paris, oignon, bouillon, crème", "astuce": "Repas léger du soir"}, {"nom": "Velouté de brocolis au fromage", "acc": "Tartines", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 25, "type": "Végétarien", "ing": "Brocolis, pommes de terre, bouillon, vache qui rit ou cheddar", "astuce": "Le fromage fait passer le brocoli"}, {"nom": "Minestrone", "acc": "Pain, parmesan", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 40, "type": "Végétarien", "ing": "Légumes variés, haricots blancs, petites pâtes, tomates, parmesan", "astuce": "Soupe complète italienne", "orig": "Cuisine du monde", "pays": "Italie"}, {"nom": "Gazpacho", "acc": "Croûtons, jambon cru", "moment": "Midi ou soir", "jours": "Tous", "diff": "Très facile", "temps": 15, "type": "Végétarien", "ing": "Tomates, concombre, poivron, ail, huile d'olive, pain", "astuce": "Soupe froide d'été, sans cuisson", "orig": "Cuisine du monde", "pays": "Espagne"}, {"nom": "Soupe chinoise poulet-nouilles", "acc": "—", "moment": "Soir", "jours": "Semaine", "diff": "Facile", "temps": 25, "type": "Viande", "ing": "Bouillon de poulet, nouilles, poulet, champignons, carottes, sauce soja", "astuce": "Bol complet et réconfortant"}, {"nom": "Salade César", "acc": "Pain", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Viande", "ing": "Romaine, poulet, croûtons, parmesan, sauce César", "astuce": "Poulet pané pour les enfants"}, {"nom": "Salade de lentilles", "acc": "Œufs durs", "moment": "Midi", "jours": "Tous", "diff": "Facile", "temps": 20, "type": "Végétarien", "ing": "Lentilles cuites, échalote, carottes, persil, vinaigrette moutarde", "astuce": "Lentilles en bocal pour aller vite"}, {"nom": "Salade de riz", "acc": "—", "moment": "Midi", "jours": "Tous", "diff": "Très facile", "temps": 20, "type": "Poisson", "ing": "Riz, thon, maïs, tomates, œufs durs, olives", "astuce": "Pique-nique et midis d'été"}, {"nom": "Salade grecque", "acc": "Pain pita", "moment": "Midi ou soir", "jours": "Tous", "diff": "Très facile", "temps": 15, "type": "Végétarien", "ing": "Tomates, concombre, feta, olives, oignon rouge, origan", "astuce": "Sans cuisson", "orig": "Cuisine du monde", "pays": "Grèce"}, {"nom": "Salade de quinoa aux légumes", "acc": "—", "moment": "Midi", "jours": "Tous", "diff": "Facile", "temps": 25, "type": "Végétarien", "ing": "Quinoa, concombre, tomates, feta, pois chiches, menthe", "astuce": "Se garde 2 jours au frigo"}, {"nom": "Salade de chèvre chaud", "acc": "Pain", "moment": "Soir", "jours": "Tous", "diff": "Facile", "temps": 20, "type": "Végétarien", "ing": "Salade, crottins de chèvre, pain, miel, noix", "astuce": "Miel sur le chèvre pour les enfants"}, {"nom": "Salade périgourdine", "acc": "Pain", "moment": "Midi", "jours": "Week-end", "diff": "Facile", "temps": 20, "type": "Viande", "ing": "Salade, gésiers confits, magret fumé, noix, pommes de terre", "astuce": "Repas complet du Sud-Ouest", "orig": "Régional", "pays": "Sud-Ouest"}, {"nom": "Salade de pommes de terre et saucisses", "acc": "—", "moment": "Midi ou soir", "jours": "Tous", "diff": "Facile", "temps": 30, "type": "Viande", "ing": "Pommes de terre, saucisses de Strasbourg, cornichons, oignon, vinaigrette", "astuce": "Tiède, c'est encore meilleur"}];
+BASE.forEach(m => m.base = true);
+
+const DIFFS = ["Très facile","Facile","Moyen","Élaboré"];
+const TYPES = ["Viande","Poisson","Œufs","Végétarien"];
+const MOIS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+const JOURS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
+const SLOTS = {midi:"Midi", soir:"Soir"};
+
+let state = { plan:{}, custom:[], fav:[] };
+let db = null, canWrite = true;
+let today = new Date(); today.setHours(0,0,0,0);
+let sel = new Date(today);
+let viewMonth = new Date(today.getFullYear(), today.getMonth(), 1);
+let shopWeek = monday(today);
+let checked = {};
+const filters = { q:"", moment:"Tous", jours:"Tous", diff:"Tous", type:"Tous", temps:"Tous", orig:"Tous", show:"Tous", tri:"Par défaut" };
+
+/* ---------- helpers ---------- */
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function key(d){ return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); }
+function fromKey(k){ const [y,m,d]=k.split("-").map(Number); return new Date(y,m-1,d); }
+function addDays(d,n){ const x=new Date(d); x.setDate(x.getDate()+n); return x; }
+function monday(d){ const x=new Date(d); const w=(x.getDay()+6)%7; x.setDate(x.getDate()-w); x.setHours(0,0,0,0); return x; }
+function isWE(d){ return d.getDay()===0 || d.getDay()===6; }
+function longDate(d){ return JOURS[d.getDay()]+" "+d.getDate()+" "+MOIS[d.getMonth()]; }
+function allMenus(){ return BASE.concat(state.custom.map(m=>({...m, mine:true}))); }
+function findMenu(nom){ return allMenus().find(m => m.nom === nom); }
+function isFav(nom){ return state.fav.includes(nom); }
+function toggleFav(nom){
+  state.fav = isFav(nom) ? state.fav.filter(x=>x!==nom) : state.fav.concat([nom]);
+  saveFav(); renderAll(); toast(isFav(nom) ? "★ Ajouté aux favoris" : "Retiré des favoris");
+}
+/* historique : dernière fois cuisiné (jusqu'à aujourd'hui) et prochaine fois prévue */
+let _hist = null, _histSrc = null;
+function hist(){
+  if(_histSrc === state.plan && _hist) return _hist;
+  const last = {}, next = {}, tk = key(today);
+  for(const [k, day] of Object.entries(state.plan)){
+    for(const s of ["midi","soir"]){
+      const p = day[s] && day[s].plat; if(!p) continue;
+      if(k <= tk){ if(!last[p] || k > last[p]) last[p] = k; }
+      else { if(!next[p] || k < next[p]) next[p] = k; }
+    }
+  }
+  _hist = {last, next}; _histSrc = state.plan; return _hist;
+}
+function daysSince(nom){ const l = hist().last[nom]; return l ? Math.round((today - fromKey(l))/86400000) : Infinity; }
+function lastText(nom){
+  const h = hist(), n = h.next[nom];
+  const d = daysSince(nom);
+  let s = d===Infinity ? "Jamais cuisiné" : d===0 ? "Prévu aujourd'hui" : d===1 ? "Fait hier" : d<14 ? `Fait il y a ${d} j` : d<60 ? `Fait il y a ${Math.round(d/7)} sem.` : `Fait il y a ${Math.round(d/30)} mois`;
+  if(n){ const nd = fromKey(n); s += ` · prévu ${JOURS[nd.getDay()].slice(0,3)}. ${nd.getDate()}`; }
+  return s;
+}
+const FLAGS = {"Italie":"🇮🇹","Grèce":"🇬🇷","Liban":"🇱🇧","Maroc":"🇲🇦","Maghreb":"🇲🇦","Inde":"🇮🇳","Thaïlande":"🇹🇭","Vietnam":"🇻🇳","Chine":"🇨🇳","Japon":"🇯🇵","Corée":"🇰🇷","Mexique":"🇲🇽","États-Unis":"🇺🇸","Hongrie":"🇭🇺","Royaume-Uni":"🇬🇧","Sénégal":"🇸🇳","Espagne":"🇪🇸"};
+function origPill(m){
+  if(m.orig==="Cuisine du monde") return `<span class="pill world">${FLAGS[m.pays]||"🌍"} ${esc(m.pays||"Monde")}</span>`;
+  if(m.orig==="Régional") return `<span class="pill region">📍 ${esc(m.pays||"Région")}</span>`;
+  return origPill0(m);
+}
+function origPill0(m){ return m.orig==="Breton" ? '<span class="pill bzh">Breton</span>' : m.orig==="Classique français" ? '<span class="pill fr">Classique</span>' : m.orig==="Restaurant" ? '<span class="pill resto">Restaurant</span>' : ""; }
+function diffClass(d){ return "d"+Math.max(0,DIFFS.indexOf(d)); }
+function fitsSlot(m, d, slot){
+  const okM = m.moment === "Midi ou soir" || m.moment === SLOTS[slot];
+  const okJ = m.jours === "Tous" || (isWE(d) ? m.jours === "Week-end" : m.jours === "Semaine");
+  return okM && okJ;
+}
+function getSlot(k, slot){ return (state.plan[k] && state.plan[k][slot]) || null; }
+function toast(t){ const el=$("toast"); el.textContent=t; el.classList.add("on"); clearTimeout(toast._t); toast._t=setTimeout(()=>el.classList.remove("on"),1800); }
+
+/* ---------- persistence ---------- */
+const LS = "menus-famille-v1";
+function loadLocal(){ try{ const s=JSON.parse(localStorage.getItem(LS)||"null"); if(s){ state.plan=s.plan||{}; state.custom=s.custom||[]; state.fav=s.fav||[]; } }catch(e){} }
+function saveLocal(){ try{ localStorage.setItem(LS, JSON.stringify(state)); }catch(e){} }
+
+const writers = {};
+function queueWrite(path, getBody){
+  saveLocal();
+  if(!db || !canWrite) return;
+  const w = writers[path] || (writers[path] = {busy:false, again:false});
+  if(w.busy){ w.again = true; return; }
+  const run = async () => {
+    w.busy = true; w.again = false;
+    setSync("Enregistrement…");
+    try{ await db.doc(path).set(getBody()); setSync("✓ Enregistré"); }
+    catch(e){
+      if(e && e.code === "invalid_argument"){ canWrite = false; setSync("Lecture seule", true); }
+      else if(e && e.code === "unavailable"){ await new Promise(r=>setTimeout(r, 800+Math.random()*800)); try{ await db.doc(path).set(getBody()); setSync("✓ Enregistré"); }catch(_){ setSync("Non enregistré", true); } }
+      else setSync("Non enregistré", true);
+    }
+    w.busy = false;
+    if(w.again) run();
+  };
+  run();
+}
+function savePlan(){ queueWrite("famille/planning", () => ({ plan: state.plan })); }
+function saveCustom(){ queueWrite("famille/plats", () => ({ items: state.custom })); }
+function saveFav(){ queueWrite("famille/favoris", () => ({ items: state.fav })); }
+function setSync(t, err){ const el=$("sync"); el.textContent=t; el.classList.toggle("err", !!err); }
+
+async function initDb(){
+  try{ db = await claude.use("db"); }catch(e){ db = null; }
+  if(!db){ setSync("Sauvegarde sur cet appareil"); return; }
+  try{
+    const u = await claude.use("user");
+    if(u && u.can){ const c = await u.can("data.write"); if(c === false){ canWrite = false; } }
+  }catch(e){}
+  let gotPlan=false;
+  const timer = setTimeout(()=>{ if(!gotPlan) setSync("Connexion lente…", true); }, 10000);
+  db.doc("famille/planning").onSnapshot(s => {
+    if(!s.metadata.fromCache){ gotPlan=true; clearTimeout(timer); setSync(canWrite ? "✓ Synchronisé" : "Lecture seule", !canWrite); }
+    if(s.exists){ const d=s.data(); if(d && d.plan && typeof d.plan==="object"){ state.plan = JSON.parse(JSON.stringify(d.plan)); saveLocal(); renderAll(); } }
+    else if(!s.metadata.fromCache && Object.keys(state.plan).length && canWrite){ savePlan(); }
+  }, e => { clearTimeout(timer); setSync("Sauvegarde sur cet appareil", true); });
+  db.doc("famille/favoris").onSnapshot(s => {
+    if(s.exists){ const d=s.data(); if(d && Array.isArray(d.items)){ state.fav = d.items.slice(); saveLocal(); renderAll(); } }
+    else if(!s.metadata.fromCache && state.fav.length && canWrite){ saveFav(); }
+  }, e => {});
+  db.doc("famille/plats").onSnapshot(s => {
+    if(s.exists){ const d=s.data(); if(d && Array.isArray(d.items)){ state.custom = JSON.parse(JSON.stringify(d.items)); saveLocal(); renderAll(); } }
+    else if(!s.metadata.fromCache && state.custom.length && canWrite){ saveCustom(); }
+  }, e => {});
+}
+
+/* ---------- plan mutations ---------- */
+function setSlot(k, slot, patch){
+  const day = state.plan[k] ? {...state.plan[k]} : {};
+  const cur = day[slot] ? {...day[slot]} : {};
+  Object.assign(cur, patch);
+  Object.keys(cur).forEach(x => { if(!cur[x]) delete cur[x]; });
+  if(Object.keys(cur).length) day[slot] = cur; else delete day[slot];
+  if(Object.keys(day).length) state.plan[k] = day; else delete state.plan[k];
+  savePlan(); renderAll();
+}
+
+/* ---------- calendar ---------- */
+function renderCal(){
+  $("monthTitle").textContent = MOIS[viewMonth.getMonth()]+" "+viewMonth.getFullYear();
+  $("dows").innerHTML = ["Lu","Ma","Me","Je","Ve","Sa","Di"].map(d=>`<div class="dow">${d}</div>`).join("");
+  const start = monday(viewMonth);
+  let h = "";
+  for(let i=0;i<42;i++){
+    const d = addDays(start,i);
+    if(i===35 && d.getMonth()!==viewMonth.getMonth()) break;
+    const k = key(d), p = state.plan[k] || {};
+    const hasNote = (p.midi && p.midi.note) || (p.soir && p.soir.note);
+    const cls = ["day", d.getMonth()!==viewMonth.getMonth()?"out":"", isWE(d)?"we":"", +d===+today?"today":"", +d===+sel?"sel":""].join(" ");
+    h += `<button class="${cls}" data-k="${k}" aria-label="${longDate(d)}">
+      ${hasNote?'<span class="dot"></span>':''}
+      <span class="n">${d.getDate()}</span>
+      <span class="bars"><span class="bar m ${p.midi&&p.midi.plat?'f':''}"></span><span class="bar s ${p.soir&&p.soir.plat?'f':''}"></span></span>
+    </button>`;
+  }
+  $("cal").innerHTML = h;
+}
+
+function renderDay(){
+  const k = key(sel);
+  { const s=longDate(sel); $("dayTitle").textContent = s.charAt(0).toUpperCase()+s.slice(1); }
+  $("dayTag").textContent = isWE(sel) ? "Week-end" : "Semaine";
+  let h = "";
+  for(const slot of ["midi","soir"]){
+    const s = getSlot(k, slot) || {};
+    const m = s.plat ? findMenu(s.plat) : null;
+    h += `<div class="slot ${slot}"><div class="lab">${slot==="midi"?"☀️ Midi":"🌙 Soir"}</div>`;
+    if(s.plat){
+      h += `<div class="platrow"><div class="plat" data-act="${!m || m.mine ? 'edit' : 'pick'}" data-slot="${slot}" style="cursor:pointer">${esc(s.plat)}${!m || m.mine ? ` <button class="pen" data-act="edit" data-slot="${slot}" aria-label="Modifier le plat">✏️</button>` : ""}</div>${m?`<button class="star ${isFav(s.plat)?'on':''}" data-act="fav" data-slot="${slot}" aria-label="Favori">${isFav(s.plat)?"★":"☆"}</button>`:""}</div>`;
+      if(m){
+        h += `<div class="meta"><span>⏱ ${m.temps} min</span><span class="pill ${diffClass(m.diff)}">${esc(m.diff)}</span>${m.acc&&m.acc!=="—"?`<span>+ ${esc(m.acc)}</span>`:""}</div>`;
+        if(m.astuce) h += `<div class="ing">💡 ${esc(m.astuce)}</div>`;
+      }
+    } else h += `<div class="empty">Rien de prévu</div>`;
+    if(s.note) h += `<div class="notebox" data-act="note" data-slot="${slot}" style="cursor:pointer">📝 <span style="flex:1">${esc(s.note)}</span><button class="pen" data-act="note" data-slot="${slot}" aria-label="Modifier la note">✏️</button></div>`;
+    h += `<div class="actions">
+      <button class="btn ${s.plat?'ghost':'main'}" data-act="pick" data-slot="${slot}">${s.plat?"Changer":"Choisir un plat"}</button>
+      ${s.note ? "" : `<button class="btn note" data-act="note" data-slot="${slot}">+ Note</button>`}
+      ${s.plat||s.note?`<button class="btn danger" data-act="clear" data-slot="${slot}">Effacer</button>`:""}
+    </div></div>`;
+  }
+  $("slots").innerHTML = h;
+}
+
+function renderWeek(){
+  const mon = monday(sel);
+  const sun = addDays(mon,6);
+  $("weekTitle").textContent = mon.getMonth()===sun.getMonth() ? `Semaine du ${mon.getDate()} au ${sun.getDate()} ${MOIS[sun.getMonth()]}` : `Du ${mon.getDate()} ${MOIS[mon.getMonth()].slice(0,4)}. au ${sun.getDate()} ${MOIS[sun.getMonth()].slice(0,4)}.`;
+  let h = "";
+  for(let i=0;i<7;i++){
+    const d = addDays(mon,i), k = key(d);
+    const cell = (slot, c) => { const s = getSlot(k,slot)||{}; return `<div class="c ${c} ${s.plat?'f':''}" data-k="${k}">${s.plat?esc(s.plat):'<span class="mut">—</span>'}${s.note?`<small>📝 ${esc(s.note)}</small>`:""}</div>`; };
+    h += `<div class="weekrow${+d===+sel?' cur':''}"><div class="d">${JOURS[d.getDay()].slice(0,3)} ${d.getDate()}</div>${cell("midi","m")}${cell("soir","s")}</div>`;
+  }
+  $("weekList").innerHTML = `<div class="weekrow" style="font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase"><div></div><div>☀️ Midi</div><div>🌙 Soir</div></div>` + h;
+}
+
+/* ---------- sheet ---------- */
+function openSheet(title, html, after, opts){
+  opts = opts || {};
+  $("shTitle").textContent = title;
+  $("shTools").innerHTML = opts.tools || ""; $("shTools").style.display = opts.tools ? "" : "none";
+  $("shBody").innerHTML = html;
+  document.querySelector("#ov .sheet").classList.toggle("tall", !!opts.tall);
+  $("ov").classList.add("on"); document.body.style.overflow = "hidden";
+  fitViewport();
+  $("shBody").scrollTop = 0; if(after) after();
+}
+function closeSheet(){ if(document.activeElement) document.activeElement.blur(); $("ov").classList.remove("on","top"); document.body.style.overflow = ""; }
+/* garde la fenêtre au-dessus du clavier sur téléphone */
+function fitViewport(){
+  const vv = window.visualViewport, ov = $("ov");
+  if(!vv){ ov.style.height = ""; ov.style.top = ""; return; }
+  ov.style.height = vv.height + "px";
+  ov.style.top = vv.offsetTop + "px";
+}
+if(window.visualViewport){
+  visualViewport.addEventListener("resize", fitViewport);
+  visualViewport.addEventListener("scroll", fitViewport);
+}
+const TYPING = "input[type=search], input[type=text], input:not([type]), input[type=number], textarea";
+document.addEventListener("focusin", e => {
+  if(!e.target.matches || !e.target.matches(TYPING + ", input.inp")) return;
+  document.body.classList.add("kbd");
+  if(e.target.closest("#ov") && e.target.matches(TYPING)){
+    $("ov").classList.add("top");
+    setTimeout(() => { try{ e.target.scrollIntoView({block:"nearest"}); }catch(_){} }, 50);
+  }
+});
+document.addEventListener("focusout", () => setTimeout(() => {
+  const a = document.activeElement;
+  if(!a || !a.matches || !a.matches(TYPING + ", input.inp")) document.body.classList.remove("kbd");
+  if(!a || !a.matches || !a.matches(TYPING) || !a.closest("#ov")) $("ov").classList.remove("top");
+}, 80));
+
+/* recherche sans accents, avec surlignage */
+function fold(s){ return Array.from(String(s||"")).map(c => (c.normalize("NFD")[0] || c).toLowerCase()).join(""); }
+function hl(text, q){
+  text = String(text||"");
+  const fq = fold(q.trim()); if(!fq) return esc(text);
+  const chars = Array.from(text), ft = chars.map(c => (c.normalize("NFD")[0]||c).toLowerCase());
+  let out = "", i = 0; const n = Array.from(fq).length;
+  while(i < chars.length){
+    if(ft.slice(i, i+n).join("") === fq){ out += "<mark>" + esc(chars.slice(i,i+n).join("")) + "</mark>"; i += n; }
+    else { out += esc(chars[i]); i++; }
+  }
+  return out;
+}
+function matchScore(m, q){
+  const fq = fold(q.trim()); if(!fq) return 1;
+  const fn = fold(m.nom);
+  if(fn.startsWith(fq)) return 4;
+  if(fn.split(/[\s'-]+/).some(w => w.startsWith(fq))) return 3;
+  if(fn.includes(fq)) return 2;
+  if(fold(m.ing + " " + (m.acc||"")).includes(fq)) return 1.5;
+  return 0;
+}
+function ingSnippet(m, q){
+  const fq = fold(q.trim()); if(!fq || fold(m.nom).includes(fq)) return "";
+  const parts = (m.ing||"").split(",").map(x=>x.trim()).filter(x => fold(x).includes(fq));
+  if(!parts.length && fold(m.acc||"").includes(fq)) return "Avec : " + hl(m.acc, q);
+  return parts.length ? "Contient : " + parts.map(x => hl(x, q)).join(", ") : "";
+}
+function bindSearch(input, wrap, clr, onChange){
+  const upd = () => { wrap.classList.toggle("has", !!input.value); onChange(input.value); };
+  input.addEventListener("input", upd);
+  input.addEventListener("keydown", e => { if(e.key === "Enter"){ e.preventDefault(); input.blur(); } });
+  clr.addEventListener("click", () => { input.value = ""; upd(); input.focus(); });
+}
+$("shClose").onclick = closeSheet;
+$("ov").addEventListener("click", e => { if(e.target.id==="ov") closeSheet(); });
+document.addEventListener("keydown", e => { if(e.key==="Escape") closeSheet(); });
+
+function openPicker(k, slot){
+  const d = fromKey(k);
+  const pf = { q:"", adapt:true, diff:"Tous", fav:false, old:false };
+  const tools = `
+    <div class="searchwrap" id="pqwrap"><input class="search" id="pq" placeholder="Plat ou ingrédient…" type="search" enterkeyhint="search" autocomplete="off"><button class="clr" id="pqclr" aria-label="Effacer la recherche">✕</button></div>
+    <label class="toggle"><input type="checkbox" id="padapt" checked> Plats adaptés au ${SLOTS[slot].toLowerCase()} ${isWE(d)?"du week-end":"en semaine"}</label>
+    <div class="chips" id="popt"></div>
+    <div class="chips" id="pdiff"></div>`;
+  openSheet(`${SLOTS[slot]} · ${longDate(d)}`, `
+    <div class="actions" id="pacts" style="margin:0 0 10px"><button class="btn main" id="prand">🎲 Au hasard</button><button class="btn ghost" id="pfree">✏️ Autre plat</button></div>
+    <div class="rescount" id="pcount"></div>
+    <div id="plist"></div>`, () => {
+    const candidates = (adapt = pf.adapt) => allMenus()
+      .map(m => ({m, sc: matchScore(m, pf.q)}))
+      .filter(x => x.sc > 0 && (!adapt || fitsSlot(x.m,d,slot)) && (pf.diff==="Tous"||x.m.diff===pf.diff) && (!pf.fav || isFav(x.m.nom)))
+      .sort((a,b) => b.sc - a.sc || (pf.old ? ((daysSince(b.m.nom) - daysSince(a.m.nom)) || 0) : 0) || (isFav(b.m.nom) - isFav(a.m.nom)) || a.m.temps - b.m.temps)
+      .map(x => x.m);
+    const draw = () => {
+      $("popt").innerHTML = `<button class="chip ${pf.fav?'on':''}" data-o="fav">★ Favoris (${state.fav.length})</button><button class="chip ${pf.old?'on':''}" data-o="old">🕒 Pas fait depuis longtemps</button>`;
+      $("pdiff").innerHTML = ["Tous",...DIFFS].map(x=>`<button class="chip ${pf.diff===x?'on':''}" data-d="${x}">${x==="Tous"?"Toutes difficultés":x}</button>`).join("");
+      const q = pf.q.trim(), res = candidates();
+      $("pacts").style.display = q ? "none" : "";
+      $("pcount").textContent = q ? (res.length ? `${res.length} résultat${res.length>1?"s":""} pour « ${q} »` : "") : `${res.length} plat${res.length>1?"s":""} proposé${res.length>1?"s":""}`;
+      let h = res.map(m => {
+        const sn = ingSnippet(m, q);
+        return `<button class="pick" data-n="${esc(m.nom)}"><div style="min-width:0"><div class="t">${hl(m.nom, q)}</div>
+          <div class="s">${isFav(m.nom)?'<span style="color:#E9A23B">★</span> ':""}${esc(m.acc&&m.acc!=="—"?m.acc+" · ":"")}${esc(m.type)} ${origPill(m)}</div>${sn?`<div class="ingm">${sn}</div>`:""}<div class="ingm">🕒 ${lastText(m.nom)}</div></div>
+          <div style="text-align:right;flex:none"><div style="font-weight:800;font-size:13px">${m.temps} min</div><span class="pill ${diffClass(m.diff)}">${esc(m.diff)}</span></div></button>`;
+      }).join("");
+      if(!res.length){
+        const other = pf.adapt ? candidates(false).length : 0;
+        h = `<p class="hint">Aucun plat ne correspond${q?` à « ${esc(q)} »`:""}.</p>` +
+          (other ? `<button class="btn" id="pall" style="margin-bottom:8px">Voir les ${other} plat${other>1?"s":""} hors ${SLOTS[slot].toLowerCase()} / ${isWE(d)?"week-end":"semaine"}</button>` : "");
+      }
+      if(q) h += `<button class="pick" data-free="1" style="background:var(--green-soft)"><div><div class="t">✏️ Mettre « ${esc(q)} »</div><div class="s">Utiliser ce texte comme repas</div></div></button>`;
+      $("plist").innerHTML = h;
+      if($("pall")) $("pall").onclick = () => { pf.adapt = false; $("padapt").checked = false; draw(); };
+    };
+    bindSearch($("pq"), $("pqwrap"), $("pqclr"), v => { pf.q = v; draw(); $("shBody").scrollTop = 0; });
+    $("padapt").onchange = e => { pf.adapt = e.target.checked; draw(); };
+    $("pdiff").onclick = e => { const b=e.target.closest("[data-d]"); if(b){ pf.diff=b.dataset.d; draw(); } };
+    $("popt").onclick = e => { const b=e.target.closest("[data-o]"); if(b){ pf[b.dataset.o] = !pf[b.dataset.o]; draw(); $("shBody").scrollTop = 0; } };
+    $("plist").onclick = e => {
+      const f = e.target.closest("[data-free]");
+      if(f){ setSlot(k, slot, {plat: pf.q.trim()}); closeSheet(); toast("Ajouté : " + pf.q.trim()); return; }
+      const b = e.target.closest("[data-n]"); if(b){ setSlot(k, slot, {plat:b.dataset.n}); closeSheet(); toast("Ajouté au "+SLOTS[slot].toLowerCase()+" du "+longDate(d)); }
+    };
+    /* sur téléphone : faire défiler la liste ferme le clavier, pour voir tous les résultats */
+    $("shBody").addEventListener("touchstart", () => { if(document.activeElement === $("pq")) $("pq").blur(); }, {passive:true});
+    $("prand").onclick = () => { const c=candidates(); if(!c.length) return toast("Aucun plat ne correspond"); const m=c[Math.floor(Math.random()*c.length)]; setSlot(k,slot,{plat:m.nom}); closeSheet(); toast("🎲 "+m.nom); };
+    $("pfree").onclick = () => openFree(k, slot);
+    draw();
+  }, { tools, tall:true });
+}
+
+function openFree(k, slot){
+  const cur = getSlot(k,slot) || {};
+  openSheet(cur.plat ? `Modifier le repas · ${SLOTS[slot]}` : `Autre plat · ${SLOTS[slot]}`, `
+    <p class="hint">Pour un repas qui n'est pas dans la liste (restaurant, restes, plat improvisé…).</p>
+    <input class="inp" id="fv" maxlength="80" placeholder="Ex. : Restes de lasagnes" value="${esc(cur.plat||"")}">
+    <div class="quick">${["Restes","Restaurant","Chez les grands-parents","Cantine","Pique-nique","Plateau télé"].map(x=>`<button class="chip" data-q="${x}">${x}</button>`).join("")}</div>
+    <div class="actions"><button class="btn main" id="fok">Valider</button><button class="btn ghost" id="fsave">＋ Ajouter à mes plats</button></div>
+    <p class="hint" style="margin-top:8px">« Ajouter à mes plats » le garde dans la liste des menus (avec temps, ingrédients…) pour le réutiliser.</p>`, () => {
+    $("shBody").querySelector(".quick").onclick = e => { const b=e.target.closest("[data-q]"); if(b) $("fv").value=b.dataset.q; };
+    $("fok").onclick = () => { const v=$("fv").value.trim(); setSlot(k,slot,{plat:v}); closeSheet(); toast(v ? "Repas modifié" : "Repas effacé"); };
+    $("fsave").onclick = () => {
+      const v = $("fv").value.trim(); if(!v) return toast("Écrivez d'abord le nom du plat");
+      if(findMenu(v)){ setSlot(k,slot,{plat:v}); closeSheet(); return toast("Ce plat est déjà dans la liste"); }
+      state.custom.push({ nom:v, acc:"", moment:"Midi ou soir", jours:"Tous", diff:"Facile", temps:30, type:"Viande", ing:"", astuce:"" });
+      saveCustom(); setSlot(k,slot,{plat:v});
+      openAddPlat(findMenu(v)); toast("Ajouté à vos plats : complétez si vous voulez");
+    };
+    setTimeout(()=>{ const f=$("fv"); if(!f) return; f.focus(); try{ f.setSelectionRange(f.value.length, f.value.length); }catch(_){} },50);
+  });
+}
+
+function openNote(k, slot){
+  const cur = getSlot(k,slot) || {};
+  const d = fromKey(k);
+  openSheet(`Note · ${SLOTS[slot]} du ${longDate(d)}`, `
+    <textarea class="inp" id="nv" maxlength="200" placeholder="Ex. : Repas avec la famille, on sera 8">${esc(cur.note||"")}</textarea>
+    <div class="quick">${["👨‍👩‍👧‍👦 Repas avec la famille","🎂 Anniversaire","👫 Invités","🍽 Restaurant","🏫 Enfants à la cantine","🚗 Absent","⏰ Soir pressé"].map(x=>`<button class="chip" data-q="${x}">${x}</button>`).join("")}</div>
+    <div class="actions"><button class="btn main" id="nok">Enregistrer</button>${cur.note?'<button class="btn danger" id="ndel">Supprimer la note</button>':""}</div>`, () => {
+    $("shBody").querySelector(".quick").onclick = e => { const b=e.target.closest("[data-q]"); if(!b) return; const t=$("nv"); t.value = t.value ? t.value.trim()+" · "+b.dataset.q : b.dataset.q; };
+    $("nok").onclick = () => { setSlot(k,slot,{note:$("nv").value.trim()}); closeSheet(); toast("Note enregistrée"); };
+    if($("ndel")) $("ndel").onclick = () => { setSlot(k,slot,{note:""}); closeSheet(); };
+    setTimeout(()=>{ const n=$("nv"); if(n) n.focus(); },50);
+  });
+}
+
+function openPlan(nom){
+  const m = findMenu(nom);
+  let dk = key(sel), slot = m && m.moment==="Midi" ? "midi" : "soir";
+  openSheet("Planifier « "+nom+" »", `
+    <label class="fl">Jour</label><input class="inp" type="date" id="pd" value="${dk}">
+    <label class="fl">Repas</label><div class="seg" id="ps"><button data-s="midi">☀️ Midi</button><button data-s="soir">🌙 Soir</button></div>
+    <p class="hint" id="pw" style="margin-top:10px"></p>
+    <div class="actions"><button class="btn main" id="pok">Ajouter au calendrier</button></div>`, () => {
+    const upd = () => {
+      [...$("ps").children].forEach(b=>b.classList.toggle("on", b.dataset.s===slot));
+      const cur = dk && getSlot(dk,slot);
+      $("pw").textContent = cur && cur.plat ? "⚠️ Remplacera « "+cur.plat+" »" : "";
+    };
+    $("pd").onchange = e => { dk = e.target.value; upd(); };
+    $("ps").onclick = e => { const b=e.target.closest("[data-s]"); if(b){ slot=b.dataset.s; upd(); } };
+    $("pok").onclick = () => { if(!dk) return; setSlot(dk,slot,{plat:nom}); closeSheet(); toast("Ajouté le "+longDate(fromKey(dk))); };
+    upd();
+  });
+}
+
+function openAddPlat(edit){
+  const v = edit || { nom:"", acc:"", moment:"Midi ou soir", jours:"Tous", diff:"Facile", temps:30, type:"Viande", ing:"", astuce:"" };
+  const opt = (arr, x) => arr.map(o=>`<option ${o===x?"selected":""}>${o}</option>`).join("");
+  openSheet(edit ? "Modifier le plat" : "Ajouter un plat", `
+    <label class="fl">Nom du plat *</label><input class="inp" id="a_nom" maxlength="80" value="${esc(v.nom)}">
+    <label class="fl">Accompagnement</label><input class="inp" id="a_acc" maxlength="80" value="${esc(v.acc||"")}">
+    <div class="row2"><div><label class="fl">Moment</label><select class="inp" id="a_moment">${opt(["Midi ou soir","Midi","Soir"],v.moment)}</select></div>
+    <div><label class="fl">Jours</label><select class="inp" id="a_jours">${opt(["Tous","Semaine","Week-end"],v.jours)}</select></div></div>
+    <div class="row2"><div><label class="fl">Difficulté</label><select class="inp" id="a_diff">${opt(DIFFS,v.diff)}</select></div>
+    <div><label class="fl">Temps (min)</label><input class="inp" id="a_temps" type="number" min="1" max="600" value="${esc(v.temps)}"></div></div>
+    <label class="fl">Type</label><select class="inp" id="a_type">${opt(TYPES,v.type)}</select>
+    <label class="fl">Ingrédients principaux (séparés par des virgules)</label><input class="inp" id="a_ing" maxlength="200" value="${esc(v.ing||"")}">
+    <label class="fl">Astuce</label><input class="inp" id="a_astuce" maxlength="150" value="${esc(v.astuce||"")}">
+    <div class="actions"><button class="btn main" id="a_ok">${edit ? "Enregistrer" : "Ajouter"}</button>${edit ? '<button class="btn danger" id="a_del">Supprimer ce plat</button>' : ""}</div>`, () => {
+    $("a_ok").onclick = () => {
+      const nom = $("a_nom").value.trim();
+      if(!nom) return toast("Donnez un nom au plat");
+      if(nom !== v.nom && findMenu(nom)) return toast("Ce plat existe déjà");
+      const item = { nom, acc:$("a_acc").value.trim(), moment:$("a_moment").value, jours:$("a_jours").value, diff:$("a_diff").value,
+        temps: Math.max(1, parseInt($("a_temps").value)||30), type:$("a_type").value, ing:$("a_ing").value.trim(), astuce:$("a_astuce").value.trim() };
+      if(edit){
+        state.custom = state.custom.map(c => c.nom === edit.nom ? item : c);
+        if(nom !== edit.nom){ renamePlat(edit.nom, nom); }
+        saveCustom(); closeSheet(); renderAll(); toast("Plat modifié");
+      } else {
+        state.custom.push(item); saveCustom(); closeSheet(); renderAll(); toast("Plat ajouté");
+      }
+    };
+    if($("a_del")) $("a_del").onclick = () => {
+      const b = $("a_del");
+      if(!b.dataset.confirm){ b.dataset.confirm = "1"; b.textContent = "Confirmer la suppression ?"; return; }
+      state.custom = state.custom.filter(c => c.nom !== edit.nom); saveCustom(); closeSheet(); renderAll(); toast("Plat supprimé");
+    };
+  });
+}
+/* renomme un plat partout : calendrier et favoris */
+function renamePlat(oldN, newN){
+  let changed = false;
+  for(const day of Object.values(state.plan)) for(const s of ["midi","soir"]) if(day[s] && day[s].plat === oldN){ day[s].plat = newN; changed = true; }
+  if(changed) savePlan();
+  if(state.fav.includes(oldN)){ state.fav = state.fav.map(x => x === oldN ? newN : x); saveFav(); }
+}
+
+/* ---------- menus list ---------- */
+const FDEF = {
+  fMoment:["moment",["Tous","Midi","Soir"]],
+  fJours:["jours",["Tous","Semaine","Week-end"]],
+  fDiff:["diff",["Tous",...DIFFS]],
+  fType:["type",["Tous",...TYPES,"Mes plats"]],
+  fTemps:["temps",["Tous","≤ 15 min","≤ 30 min","≤ 1 h","Plus d'1 h"]],
+  fOrig:["orig",["Tous","Classique français","Régional","Breton","Restaurant","Cuisine du monde"]],
+  fShow:["show",["Tous","★ Favoris","Jamais cuisinés"]],
+  fTri:["tri",["Par défaut","Pas cuisiné depuis longtemps","Les plus rapides"]],
+};
+const FDEFAULT = { tri:"Par défaut" };
+const dflt = f => FDEFAULT[f] || "Tous";
+const FLABEL = { moment:"Moment", jours:"Jours", diff:"Difficulté", type:"Type", temps:"Temps", orig:"Origine", show:"Afficher", tri:"Tri" };
+let fpanelOpen = false;
+function renderFilters(){
+  const act = Object.entries(FDEF).filter(([,[f]]) => filters[f] !== dflt(f));
+  $("fbtn").innerHTML = "Filtres" + (act.length ? `<span class="badge">${act.length}</span>` : "");
+  $("fbtn").classList.toggle("on", fpanelOpen);
+  $("fpanel").classList.toggle("on", fpanelOpen);
+  $("activef").innerHTML = fpanelOpen ? "" : act.map(([,[f]]) => `<button class="chip" data-f="${f}" data-v="${esc(dflt(f))}">${esc(filters[f])} ✕</button>`).join("");
+  for(const [id,[f,vals]] of Object.entries(FDEF)){
+    $(id).innerHTML = vals.map(v=>`<button class="chip ${filters[f]===v?'on':''}" data-f="${f}" data-v="${esc(v)}">${v===dflt(f)?FLABEL[f]+" : "+(v==="Tous"?"tous":v.toLowerCase()):esc(v)}</button>`).join("");
+  }
+}
+function filtered(){
+  const q = filters.q;
+  return allMenus().filter(m => {
+    if(q.trim() && matchScore(m, q) === 0) return false;
+    if(filters.moment!=="Tous" && !(m.moment===filters.moment || m.moment==="Midi ou soir")) return false;
+    if(filters.jours!=="Tous" && !(m.jours===filters.jours || m.jours==="Tous")) return false;
+    if(filters.diff!=="Tous" && m.diff!==filters.diff) return false;
+    if(filters.orig!=="Tous" && m.orig!==filters.orig) return false;
+    if(filters.show==="★ Favoris" && !isFav(m.nom)) return false;
+    if(filters.show==="Jamais cuisinés" && daysSince(m.nom)!==Infinity) return false;
+    if(filters.type==="Mes plats" && !m.mine) return false;
+    if(filters.type!=="Tous" && filters.type!=="Mes plats" && m.type!==filters.type) return false;
+    const t = m.temps;
+    if(filters.temps==="≤ 15 min" && t>15) return false;
+    if(filters.temps==="≤ 30 min" && t>30) return false;
+    if(filters.temps==="≤ 1 h" && t>60) return false;
+    if(filters.temps==="Plus d'1 h" && t<=60) return false;
+    return true;
+  }).sort((a,b) => {
+    if(q.trim()){ const d = matchScore(b,q) - matchScore(a,q); if(d) return d; }
+    if(filters.tri==="Pas cuisiné depuis longtemps"){ const d = daysSince(b.nom) - daysSince(a.nom); if(d && !isNaN(d)) return d; return (isFav(b.nom)-isFav(a.nom)); }
+    if(filters.tri==="Les plus rapides") return a.temps - b.temps;
+    return 0;
+  });
+}
+function renderList(){
+  renderFilters();
+  const res = filtered();
+  const q = filters.q.trim();
+  $("count").textContent = res.length + (res.length>1?" plats":" plat") + (q ? ` pour « ${q} »` : "");
+  $("list").innerHTML = res.map(m => `
+    <div class="mcard" data-n="${esc(m.nom)}">
+      <div class="top" data-act="toggle"><div><div class="t">${hl(m.nom, q)}</div>${m.acc&&m.acc!=="—"?`<div class="acc">+ ${hl(m.acc, q)}</div>`:""}${(() => { const sn = ingSnippet(m, q); return sn ? `<div class="acc">${sn}</div>` : ""; })()}</div>
+      <div style="display:flex;flex-direction:column;align-items:flex-end;gap:4px;flex:none"><button class="star ${isFav(m.nom)?'on':''}" data-act="fav" aria-label="Favori">${isFav(m.nom)?"★":"☆"}</button><div class="tm ${m.temps<=20?'fast':m.temps>60?'slow':''}">⏱ ${m.temps} min</div></div></div>
+      <div class="pills"><span class="pill ${diffClass(m.diff)}">${esc(m.diff)}</span><span class="pill">${esc(m.moment)}</span><span class="pill">${esc(m.jours==="Tous"?"Tous les jours":m.jours)}</span><span class="pill">${esc(m.type)}</span>${origPill(m)}${m.mine?'<span class="pill mine">Mon plat</span>':""}</div>
+      <div class="hist ${daysSince(m.nom)===Infinity?'never':''}">🕒 ${lastText(m.nom)}</div>
+      <div class="more">${m.ing?`<p><b>Ingrédients :</b> ${hl(m.ing, q)}</p>`:""}${m.astuce?`<p>💡 ${esc(m.astuce)}</p>`:""}
+        <div class="actions"><button class="btn main" data-act="plan">📅 Planifier</button>${m.mine?'<button class="btn ghost" data-act="editplat">✏️ Modifier</button><button class="btn danger" data-act="del">Supprimer</button>':""}</div></div>
+    </div>`).join("") || `<p class="hint">Aucun plat ne correspond${q?` à « ${esc(q)} »`:" à ces filtres"}.</p>`;
+}
+
+/* ---------- courses ---------- */
+function renderShop(){
+  const mon = shopWeek, sun = addDays(mon,6);
+  $("shopTitle").textContent = `Du ${mon.getDate()} ${MOIS[mon.getMonth()]} au ${sun.getDate()} ${MOIS[sun.getMonth()]}`;
+  const counts = new Map(); let meals = "";
+  for(let i=0;i<7;i++){
+    const d = addDays(mon,i), k = key(d);
+    const parts = [];
+    for(const slot of ["midi","soir"]){
+      const s = getSlot(k,slot); if(!s || !s.plat) continue;
+      parts.push(`<b>${SLOTS[slot]}</b> ${esc(s.plat)}${s.note?` <span style="color:var(--note)">📝 ${esc(s.note)}</span>`:""}`);
+      const m = findMenu(s.plat); if(!m || !m.ing) continue;
+      m.ing.split(",").map(x=>x.trim()).filter(Boolean).forEach(x => {
+        const kk = x.toLowerCase();
+        const c = counts.get(kk) || {label: x.charAt(0).toUpperCase()+x.slice(1), n:0};
+        c.n++; counts.set(kk, c);
+      });
+    }
+    if(parts.length) meals += `<div style="padding:6px 0;border-bottom:1px solid var(--line)"><span style="text-transform:capitalize;font-weight:800">${JOURS[d.getDay()]} ${d.getDate()}</span><br>${parts.join("<br>")}</div>`;
+  }
+  const items = [...counts.entries()].sort((a,b)=>a[1].label.localeCompare(b[1].label,"fr"));
+  const wk = key(mon);
+  checked[wk] = checked[wk] || {};
+  $("shopList").innerHTML = items.length ? items.map(([kk,c]) => `<li class="${checked[wk][kk]?'done':''}"><input type="checkbox" data-i="${esc(kk)}" ${checked[wk][kk]?"checked":""}><span>${esc(c.label)}</span>${c.n>1?`<span class="x">× ${c.n} repas</span>`:""}</li>`).join("")
+    : `<li><span class="hint" style="margin:0">Aucun repas prévu cette semaine. Ajoutez-en depuis le calendrier.</span></li>`;
+  $("shopMeals").innerHTML = meals || `<span class="hint">Rien de prévu.</span>`;
+  $("shopList")._items = items;
+}
+
+/* ---------- events ---------- */
+document.querySelector("nav.tabs").onclick = e => {
+  const b = e.target.closest("[data-v]"); if(!b) return;
+  document.querySelectorAll("nav.tabs button").forEach(x=>x.classList.toggle("on", x===b));
+  document.querySelectorAll(".view").forEach(v=>v.classList.toggle("on", v.id==="v-"+b.dataset.v));
+  if(b.dataset.v==="shop"){ shopWeek = monday(sel); renderShop(); }
+  window.scrollTo(0,0);
+};
+$("prevM").onclick = () => { viewMonth = new Date(viewMonth.getFullYear(), viewMonth.getMonth()-1, 1); renderCal(); };
+$("nextM").onclick = () => { viewMonth = new Date(viewMonth.getFullYear(), viewMonth.getMonth()+1, 1); renderCal(); };
+$("goToday").onclick = () => { sel = new Date(today); viewMonth = new Date(today.getFullYear(), today.getMonth(), 1); renderAll(); };
+$("cal").onclick = e => {
+  const b = e.target.closest("[data-k]"); if(!b) return;
+  sel = fromKey(b.dataset.k);
+  if(sel.getMonth()!==viewMonth.getMonth()) viewMonth = new Date(sel.getFullYear(), sel.getMonth(), 1);
+  renderAll();
+  $("dayTitle").scrollIntoView({behavior:"smooth", block:"start"});
+};
+$("weekList").onclick = e => {
+  const b = e.target.closest("[data-k]"); if(!b) return;
+  sel = fromKey(b.dataset.k); viewMonth = new Date(sel.getFullYear(), sel.getMonth(), 1); renderAll();
+  $("dayTitle").scrollIntoView({behavior:"smooth", block:"start"});
+};
+$("slots").onclick = e => {
+  const b = e.target.closest("[data-act]"); if(!b) return;
+  const k = key(sel), slot = b.dataset.slot;
+  if(b.dataset.act==="fav"){ const s = getSlot(k, slot); if(s && s.plat) toggleFav(s.plat); return; }
+  if(b.dataset.act==="edit"){ const s = getSlot(k, slot) || {}; const m = s.plat && findMenu(s.plat); if(m && m.mine) openAddPlat(m); else openFree(k, slot); return; }
+  if(b.dataset.act==="pick") openPicker(k, slot);
+  if(b.dataset.act==="note") openNote(k, slot);
+  if(b.dataset.act==="clear") setSlot(k, slot, {plat:"", note:""});
+};
+function goDay(n, anim){
+  sel = addDays(sel, n);
+  if(sel.getMonth()!==viewMonth.getMonth() || sel.getFullYear()!==viewMonth.getFullYear()) viewMonth = new Date(sel.getFullYear(), sel.getMonth(), 1);
+  renderAll();
+  if(anim){ const z = $(anim); const c = n>0 ? "slide-l" : "slide-r"; z.classList.remove("slide-l","slide-r"); void z.offsetWidth; z.classList.add(c); }
+}
+$("prevD").onclick = () => goDay(-1, "dayZone");
+$("nextD").onclick = () => goDay(1, "dayZone");
+$("prevWk").onclick = () => goDay(-7, "weekZone");
+$("nextWk").onclick = () => goDay(7, "weekZone");
+function onSwipe(el, cb){
+  let x0=null, y0=null, t0=0;
+  el.addEventListener("touchstart", e => { if(e.touches.length!==1){ x0=null; return; } x0=e.touches[0].clientX; y0=e.touches[0].clientY; t0=Date.now(); }, {passive:true});
+  el.addEventListener("touchend", e => {
+    if(x0===null) return;
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0;
+    x0 = null;
+    if(Math.abs(dx) > 50 && Math.abs(dx) > 1.6*Math.abs(dy) && Date.now()-t0 < 800) cb(dx < 0 ? 1 : -1);
+  }, {passive:true});
+}
+onSwipe($("dayZone"), dir => goDay(dir, "dayZone"));
+onSwipe($("weekZone"), dir => goDay(7*dir, "weekZone"));
+onSwipe($("cal"), dir => { viewMonth = new Date(viewMonth.getFullYear(), viewMonth.getMonth()+dir, 1); renderCal(); const z=$("cal"); z.classList.remove("slide-l","slide-r"); void z.offsetWidth; z.classList.add(dir>0?"slide-l":"slide-r"); });
+
+$("fillWeek").onclick = () => {
+  const mon = monday(sel); let n = 0; const used = new Set();
+  for(let i=0;i<7;i++){ const k=key(addDays(mon,i)); ["midi","soir"].forEach(s=>{ const x=getSlot(k,s); if(x&&x.plat) used.add(x.plat); }); }
+  const plan = JSON.parse(JSON.stringify(state.plan));
+  for(let i=0;i<7;i++){
+    const d = addDays(mon,i), k = key(d);
+    for(const slot of ["midi","soir"]){
+      const cur = (plan[k]||{})[slot] || {};
+      if(cur.plat) continue;
+      let c = allMenus().filter(m => fitsSlot(m,d,slot) && !used.has(m.nom));
+      if(!isWE(d)) c = c.filter(m => m.diff==="Très facile"||m.diff==="Facile");
+      if(!c.length) continue;
+      const fresh = c.filter(m => daysSince(m.nom) > 14); if(fresh.length) c = fresh;
+      const pool = c.flatMap(m => isFav(m.nom) ? [m,m,m] : [m]);
+      const m = pool[Math.floor(Math.random()*pool.length)];
+      used.add(m.nom);
+      plan[k] = {...(plan[k]||{}), [slot]: {...cur, plat:m.nom}}; n++;
+    }
+  }
+  if(!n) return toast("La semaine est déjà complète");
+  state.plan = plan; savePlan(); renderAll(); toast(`🎲 ${n} repas proposés`);
+};
+$("clearWeek").onclick = () => {
+  const b = $("clearWeek");
+  if(!b.dataset.confirm){ b.dataset.confirm="1"; b.textContent="Confirmer ? (notes comprises)"; setTimeout(()=>{ delete b.dataset.confirm; b.textContent="Vider la semaine"; }, 3000); return; }
+  delete b.dataset.confirm; b.textContent="Vider la semaine";
+  const mon = monday(sel);
+  for(let i=0;i<7;i++) delete state.plan[key(addDays(mon,i))];
+  savePlan(); renderAll(); toast("Semaine vidée");
+};
+
+bindSearch($("q"), $("qwrap"), $("qclr"), v => { filters.q = v; renderList(); });
+$("fbtn").onclick = () => { fpanelOpen = !fpanelOpen; renderFilters(); };
+$("list").addEventListener("touchstart", () => { if(document.activeElement === $("q")) $("q").blur(); }, {passive:true});
+document.querySelector("#v-menus .filters").addEventListener("click", e => {
+  const b = e.target.closest("[data-f]"); if(!b) return;
+  filters[b.dataset.f] = b.dataset.v; renderList();
+});
+$("list").onclick = e => {
+  const card = e.target.closest(".mcard"); if(!card) return;
+  const act = e.target.closest("[data-act]"); const nom = card.dataset.n;
+  if(!act) return;
+  if(act.dataset.act==="fav"){ toggleFav(nom); return; }
+  if(act.dataset.act==="editplat"){ const m = findMenu(nom); if(m) openAddPlat(m); return; }
+  if(act.dataset.act==="toggle") card.classList.toggle("open");
+  if(act.dataset.act==="plan") openPlan(nom);
+  if(act.dataset.act==="del"){
+    if(!act.dataset.confirm){ act.dataset.confirm="1"; act.textContent="Confirmer ?"; return; }
+    state.custom = state.custom.filter(m=>m.nom!==nom); saveCustom(); renderAll(); toast("Plat supprimé");
+  }
+};
+$("addPlatBtn").onclick = openAddPlat;
+
+$("prevW").onclick = () => { shopWeek = addDays(shopWeek,-7); renderShop(); };
+$("nextW").onclick = () => { shopWeek = addDays(shopWeek,7); renderShop(); };
+$("shopList").onchange = e => {
+  const i = e.target.dataset.i; if(i==null) return;
+  const wk = key(shopWeek); checked[wk][i] = e.target.checked;
+  e.target.closest("li").classList.toggle("done", e.target.checked);
+};
+$("copyShop").onclick = async () => {
+  const items = $("shopList")._items || []; const wk = key(shopWeek);
+  const txt = "Courses – " + $("shopTitle").textContent + "\n" + items.filter(([kk])=>!checked[wk][kk]).map(([,c])=>"• "+c.label).join("\n");
+  try{ await navigator.clipboard.writeText(txt); toast("Liste copiée"); }
+  catch(e){ openSheet("Liste de courses", `<p class="hint">Sélectionnez le texte puis copiez-le.</p><textarea class="inp" style="min-height:260px" readonly>${esc(txt)}</textarea>`); }
+};
+
+/* ---------- Google Agenda ---------- */
+const GSERVER = "Google Calendar";
+let gcal = { cal:"", midi:"12:00", soir:"19:30", dur:60, events:{}, last:"", auto:true, on:false, err:"" };
+let gcalRef = null, mcp = null, gcalBusy = false;
+const GLS = "menus-famille-gcal-v1";
+function loadGcalLocal(){ try{ const s=JSON.parse(localStorage.getItem(GLS)||"null"); if(s) gcal = {...gcal, ...s}; }catch(e){} }
+async function saveGcal(){
+  try{ localStorage.setItem(GLS, JSON.stringify(gcal)); }catch(e){}
+  if(gcalRef){ try{ await gcalRef.set(JSON.parse(JSON.stringify(gcal))); }catch(e){} }
+}
+async function initGcal(){
+  loadGcalLocal();
+  try{
+    const u = await claude.use("user");
+    const id = u && await u.id();
+    if(db && id){
+      gcalRef = db.doc("data/users/"+id+"/gcal");
+      const s = await gcalRef.get();
+      if(s.exists){ const d = s.data(); if(d) gcal = {...gcal, ...JSON.parse(JSON.stringify(d))}; }
+    }
+  }catch(e){ gcalRef = null; }
+  if(!("on" in gcal) || (gcal.on === false && gcal.last && Object.keys(gcal.events).length)) { gcal.on = true; gcal.auto = true; }
+  renderGcalInfo();
+  scheduleAutoSync();
+}
+async function getMcp(){
+  if(mcp) return mcp;
+  try{ mcp = await claude.use("mcp"); }catch(e){ mcp = null; }
+  return mcp;
+}
+function payloadOf(res){
+  let p = res && (res.payload !== undefined ? res.payload : res);
+  if(typeof p === "string"){ try{ p = JSON.parse(p); }catch(e){} }
+  if(p && Array.isArray(p.content)){ const t = p.content.find(c=>c.type==="text"); if(t){ try{ p = JSON.parse(t.text); }catch(e){} } }
+  return p;
+}
+function findId(o, depth=0){
+  if(!o || typeof o !== "object" || depth>4) return null;
+  if(typeof o.id === "string" && (o.summary || o.start || o.htmlLink || o.status)) return o.id;
+  for(const k of ["event","result","data"]) { const r = findId(o[k], depth+1); if(r) return r; }
+  if(typeof o.id === "string") return o.id;
+  if(typeof o.eventId === "string") return o.eventId;
+  return null;
+}
+async function gcall(tool, input){
+  const m = await getMcp();
+  if(!m) throw {code:"unavailable_mcp"};
+  return payloadOf(await m.callTool(GSERVER, tool, input));
+}
+function errText(e){
+  const c = e && e.code;
+  if(c==="unavailable_mcp") return "La connexion à Google Agenda n'est pas disponible ici (ouvrez la page dans Claude, connecté à votre compte).";
+  if(c==="server_not_connected") return "Google Agenda n'est pas connecté à votre compte Claude (Paramètres → Connecteurs).";
+  if(c==="consent_denied" || c==="not_granted") return "Accès à Google Agenda refusé.";
+  return (e && (e.message || e.code)) || "Erreur inconnue";
+}
+function renderGcalInfo(){
+  const el = $("gcalInfo"); if(!el) return;
+  if(!gcal.on){ el.textContent = ""; return; }
+  let s = gcal.auto ? "📆 Envoi automatique vers Google Agenda activé" : "📆 Envoi manuel vers Google Agenda";
+  if(gcal.last) s += " · dernier envoi " + gcal.last;
+  if(gcal.err) s += "\n⚠️ " + gcal.err;
+  el.textContent = s; el.style.whiteSpace = "pre-line"; el.style.color = gcal.err ? "var(--red)" : "";
+}
+function addMin(hhmm, min){ const [h,m]=hhmm.split(":").map(Number); const t=h*60+m+min; return String(Math.floor(t/60)%24).padStart(2,"0")+":"+String(t%60).padStart(2,"0"); }
+
+function openGcal(){
+  openSheet("Google Agenda", `
+    <p class="hint">Tous les repas prévus et leurs notes sont envoyés dans Google Agenda (sans rappel, sans bloquer votre temps). Chaque ajout, modification ou suppression est répercuté.</p>
+    <label class="fl">Agenda</label>
+    <select class="inp" id="g_cal"><option value="">Chargement des agendas…</option></select>
+    <div class="row2">
+      <div><label class="fl">Heure du midi</label><input class="inp" type="time" id="g_midi" value="${esc(gcal.midi)}"></div>
+      <div><label class="fl">Heure du soir</label><input class="inp" type="time" id="g_soir" value="${esc(gcal.soir)}"></div>
+    </div>
+    <label class="toggle" style="margin-top:12px"><input type="checkbox" id="g_auto" ${gcal.on && !gcal.auto ? "" : "checked"}> Envoyer automatiquement chaque modification</label>
+    <div class="actions"><button class="btn main" id="g_go">📆 Enregistrer et tout envoyer</button>${gcal.on?'<button class="btn danger" id="g_off">Arrêter l\'envoi</button>':""}</div>
+    <div class="progress" id="g_prog"></div>`, async () => {
+    const sel_ = $("g_cal");
+    try{
+      const p = await gcall("list_calendars", {});
+      const cals = ((p && p.calendars) || []).filter(c => !/group\.v\.calendar\.google\.com$/.test(c.id) && c.accessRole !== "reader" && c.accessRole !== "freeBusyReader");
+      if(!cals.length) throw {message:"Aucun agenda trouvé."};
+      sel_.innerHTML = cals.map(c=>`<option value="${esc(c.id)}" ${c.id===gcal.cal?"selected":""}>${esc(c.summary||c.id)}${c.primary?" (principal)":""}</option>`).join("");
+      if(!gcal.cal || !cals.some(c=>c.id===gcal.cal)) sel_.value = (cals.find(c=>/^repas$/i.test((c.summary||"").trim()))||cals.find(c=>/famille|family/i.test(c.summary||""))||cals.find(c=>c.primary)||cals.find(c=>/@gmail\.com$/.test(c.id))||cals[0]).id;
+    }catch(e){
+      sel_.innerHTML = `<option value="">Agenda principal</option>`;
+      $("g_prog").innerHTML = `<span class="ko">${esc(errText(e))}</span>`;
+    }
+    $("g_go").onclick = () => {
+      gcal.cal = sel_.value; gcal.midi = $("g_midi").value || "12:00"; gcal.soir = $("g_soir").value || "19:30";
+      gcal.auto = $("g_auto").checked; gcal.on = true;
+      runGcalSync(true);
+    };
+    if($("g_off")) $("g_off").onclick = async () => { gcal.on = false; gcal.err = ""; await saveGcal(); renderGcalInfo(); closeSheet(); toast("Envoi vers Google Agenda arrêté"); };
+  });
+}
+
+/* Envoie TOUT : chaque repas prévu (toutes dates) + suppression des événements dont le repas a été effacé */
+let gcalPending = false, gcalTimer = null;
+function scheduleAutoSync(){
+  if(!gcal.on || !gcal.auto) return;
+  clearTimeout(gcalTimer);
+  gcalTimer = setTimeout(() => runGcalSync(false), 2000);
+}
+function mealBody(k, slot, s){
+  const t0 = slot==="midi" ? gcal.midi : gcal.soir;
+  const m = s.plat ? findMenu(s.plat) : null;
+  const desc = [
+    s.note ? "📝 " + s.note : "",
+    m && m.acc && m.acc!=="—" ? "Accompagnement : " + m.acc : "",
+    m ? "Temps : " + m.temps + " min · " + m.diff : "",
+    m && m.ing ? "Ingrédients : " + m.ing : "",
+    m && m.astuce ? "💡 " + m.astuce : "",
+    "— Menus de la famille"
+  ].filter(Boolean).join("\n");
+  return { summary: (slot==="midi"?"☀️ Midi : ":"🌙 Soir : ") + (s.plat || "Repas"), description: desc, startTime: k+"T"+t0+":00", endTime: k+"T"+addMin(t0,gcal.dur||60)+":00" };
+}
+async function runGcalSync(manual){
+  if(!gcal.on) return;
+  if(gcalBusy){ gcalPending = true; return; }
+  const cal = gcal.cal;
+  /* liste des créneaux à traiter : tous les repas prévus + tous les événements déjà envoyés */
+  const keys = new Set(Object.keys(gcal.events));
+  for(const [k, day] of Object.entries(state.plan)) for(const slot of ["midi","soir"]) if(day[slot] && (day[slot].plat || day[slot].note)) keys.add(k+"_"+slot);
+  const todo = [];
+  for(const ek of [...keys].sort()){
+    const [k, slot] = ek.split("_");
+    const s = getSlot(k, slot) || {};
+    const ev = gcal.events[ek];
+    if(!s.plat && !s.note){ if(ev) todo.push({ek,k,slot,s,ev,del:true}); continue; }
+    const body = mealBody(k, slot, s), sig = JSON.stringify([body, cal]);
+    if(ev && ev.sig === sig) continue;
+    todo.push({ek,k,slot,s,ev,body,sig});
+  }
+  const prog = manual ? $("g_prog") : null, btn = manual ? $("g_go") : null;
+  if(!todo.length){
+    if(manual){ await saveGcal(); renderGcalInfo(); if(prog) prog.innerHTML = `<span class="ok">✓ Tout est déjà à jour dans Google Agenda.</span>`; }
+    return;
+  }
+  gcalBusy = true; if(btn) btn.disabled = true;
+  let created=0, updated=0, deleted=0; const errors=[];
+  try{
+    let i = 0;
+    for(const x of todo){
+      i++; if(prog) prog.textContent = `Envoi en cours… ${i}/${todo.length}`;
+      if(!manual) setSync(`Google Agenda ${i}/${todo.length}…`);
+      try{
+        if(x.del){
+          try{ await gcall("delete_event", {calendarId:x.ev.cal||undefined, eventId:x.ev.id, notificationLevel:"NONE"}); }catch(e){ if(e && e.code==="unavailable_mcp") throw e; }
+          delete gcal.events[x.ek]; deleted++; continue;
+        }
+        if(x.ev && x.ev.cal === cal){
+          try{
+            await gcall("update_event", {...x.body, calendarId:cal||undefined, eventId:x.ev.id, notificationLevel:"NONE"});
+            gcal.events[x.ek] = {...x.ev, sig:x.sig}; updated++; continue;
+          }catch(e){ if(e && e.code==="unavailable_mcp") throw e; /* supprimé côté Google : on le recrée */ }
+        } else if(x.ev){
+          try{ await gcall("delete_event", {calendarId:x.ev.cal||undefined, eventId:x.ev.id, notificationLevel:"NONE"}); }catch(e){}
+        }
+        const p = await gcall("create_event", {...x.body, calendarId:cal||undefined, availability:"AVAILABILITY_FREE", useDefaultReminders:false, notificationLevel:"NONE"});
+        const id = findId(p);
+        if(id) gcal.events[x.ek] = {id, cal, sig:x.sig}; else delete gcal.events[x.ek];
+        created++;
+      }catch(e){
+        errors.push(longDate(fromKey(x.k))+" "+SLOTS[x.slot].toLowerCase()+" : "+errText(e));
+        if(e && ["unavailable_mcp","server_not_connected","consent_denied","not_granted"].includes(e.code)) throw e;
+      }
+    }
+    const now = new Date();
+    gcal.last = now.toLocaleDateString("fr-FR",{day:"numeric",month:"short"}) + " à " + now.toLocaleTimeString("fr-FR",{hour:"2-digit",minute:"2-digit"});
+    gcal.err = errors.length ? `${errors.length} repas non envoyé(s)` : "";
+    const msg = `✓ Google Agenda : ${created} ajouté(s), ${updated} modifié(s), ${deleted} supprimé(s).` + (errors.length ? "\n⚠️ " + errors.slice(0,4).join("\n⚠️ ") : "");
+    if(prog) prog.innerHTML = `<span class="${errors.length?'ko':'ok'}">${esc(msg)}</span>`;
+    toast(errors.length ? "Google Agenda : envoi incomplet" : "📆 Google Agenda mis à jour");
+  }catch(e){
+    gcal.err = errText(e);
+    if(prog) prog.innerHTML = `<span class="ko">${esc(gcal.err)}</span>`;
+  }
+  await saveGcal(); renderGcalInfo();
+  if(!manual) setSync(canWrite ? "✓ Synchronisé" : "Lecture seule", !canWrite);
+  gcalBusy = false; if(btn) btn.disabled = false;
+  if(gcalPending){ gcalPending = false; scheduleAutoSync(); }
+}
+$("gcalBtn").onclick = openGcal;
+
+function renderAll(){
+  _hist = null;
+  renderCal(); renderDay(); renderWeek(); renderList();
+  if(typeof scheduleAutoSync === "function") scheduleAutoSync();
+  if($("v-shop").classList.contains("on")) renderShop();
+}
+
+loadLocal();
+renderAll();
+setSync("Sauvegarde sur cet appareil");
+loadGcalLocal(); renderGcalInfo();
+(async () => { for(let i=0;i<30 && !(window.claude && window.claude.use);i++) await new Promise(r=>setTimeout(r,100)); if(window.claude && window.claude.use){ await initDb(); initGcal(); } })();
+</script>
+<script>
+/* ===== Version site web autonome : stockage Supabase, accès par code famille ===== */
+(() => {
+const SB_URL = "https://dqyobjaspxdfhjlqnrrc.supabase.co";
+const SB_KEY = "sb_publishable_y0PIDa5WMNb-K0AcDaL8Ag_jKaPYiuW";
+const CODE_KEY = "menus-famille-code";
+
+async function rpc(fn, args){
+  const r = await fetch(`${SB_URL}/rest/v1/rpc/${fn}`, {
+    method:"POST",
+    headers:{ apikey:SB_KEY, Authorization:`Bearer ${SB_KEY}`, "Content-Type":"application/json" },
+    body: JSON.stringify(args || {})
+  });
+  if(!r.ok){ let m = ""; try{ m = (await r.json()).message; }catch(_){} throw new Error(m || ("Erreur " + r.status)); }
+  const t = await r.text(); return t ? JSON.parse(t) : null;
+}
+
+/* ---- code famille : #f=CODE dans le lien, puis gardé sur l'appareil ---- */
+let code = "";
+const m = (location.hash || "").match(/f=([A-Za-z0-9_-]{20,})/);
+if(m){ code = m[1]; try{ localStorage.setItem(CODE_KEY, code); }catch(_){} }
+if(!code){ try{ code = localStorage.getItem(CODE_KEY) || ""; }catch(_){} }
+if(code && !m){ try{ history.replaceState(null, "", location.pathname + location.search + "#f=" + code); }catch(_){} }
+const shareLink = () => location.origin + location.pathname + "#f=" + code;
+const icsLink = () => `${SB_URL}/functions/v1/agenda?f=${code}`;
+
+/* ---- synchronisation ---- */
+let synced = { plan:{}, custom:"[]", fav:"[]" }, lastTs = "", busy = 0, dirty = false;
+const clone = o => JSON.parse(JSON.stringify(o));
+function applyRemote(d){
+  state.plan = d.plan || {}; state.custom = d.custom || []; state.fav = d.fav || [];
+  if(d.settings){ gcal.midi = d.settings.midi || gcal.midi; gcal.soir = d.settings.soir || gcal.soir; }
+  synced = { plan: clone(state.plan), custom: JSON.stringify(state.custom), fav: JSON.stringify(state.fav) };
+  lastTs = d.updated_at || ""; saveLocal(); renderAll();
+}
+async function pull(){
+  if(!code || busy || dirty) return;
+  try{
+    const d = await rpc("menus_get", { p_code: code });
+    if(!d){ setSync("Code famille inconnu", true); return askCode(true); }
+    if(d.updated_at !== lastTs && !busy && !dirty) applyRemote(d);
+    setSync("✓ Synchronisé");
+  }catch(e){ setSync("Hors ligne", true); }
+}
+function diffPlan(){
+  const patch = {}; const a = synced.plan, b = state.plan;
+  for(const k of new Set([...Object.keys(a), ...Object.keys(b)])){
+    for(const s of ["midi","soir"]){
+      const x = a[k] && a[k][s], y = b[k] && b[k][s];
+      if(JSON.stringify(x||null) !== JSON.stringify(y||null)){ (patch[k] = patch[k] || {})[s] = y || null; }
+    }
+  }
+  return patch;
+}
+async function push(){
+  if(!code) return;
+  if(busy){ dirty = true; return; }
+  busy++; dirty = false; setSync("Enregistrement…");
+  try{
+    const patch = diffPlan();
+    if(Object.keys(patch).length){
+      const snap = clone(state.plan);
+      lastTs = await rpc("menus_patch_plan", { p_code: code, p_patch: patch });
+      synced.plan = snap;
+    }
+    const c = JSON.stringify(state.custom);
+    if(c !== synced.custom){ lastTs = await rpc("menus_set", { p_code: code, p_field:"custom", p_value: state.custom }); synced.custom = c; }
+    const f = JSON.stringify(state.fav);
+    if(f !== synced.fav){ lastTs = await rpc("menus_set", { p_code: code, p_field:"fav", p_value: state.fav }); synced.fav = f; }
+    setSync("✓ Enregistré");
+  }catch(e){ setSync("Non enregistré – nouvel essai…", true); setTimeout(push, 5000); }
+  busy--;
+  if(dirty && busy===0){ push(); }
+}
+window.savePlan = () => { saveLocal(); push(); };
+window.saveCustom = () => { saveLocal(); push(); };
+window.saveFav = () => { saveLocal(); push(); };
+window.scheduleAutoSync = () => {};
+
+setInterval(() => { if(document.visibilityState === "visible") pull(); }, 15000);
+document.addEventListener("visibilitychange", () => { if(document.visibilityState === "visible") pull(); });
+window.addEventListener("focus", pull);
+
+/* ---- écran « code famille » ---- */
+function askCode(unknown){
+  openSheet("Menus de la famille", `
+    ${unknown ? '<p class="hint" style="color:var(--red)">Ce code famille n\'existe pas.</p>' : ""}
+    <p class="hint">Pour retrouver le planning de votre famille, ouvrez le lien de partage reçu, ou collez le code famille ici.</p>
+    <label class="fl">Code ou lien de la famille</label>
+    <input class="inp" id="c_code" type="text" autocomplete="off" autocapitalize="off" placeholder="Collez le lien ou le code">
+    <div class="actions"><button class="btn main" id="c_ok">Ouvrir</button></div>
+    <p class="hint" style="margin-top:18px">Pas encore de famille ?</p>
+    <div class="actions"><button class="btn ghost" id="c_new">Créer un nouveau planning</button></div>`, () => {
+    $("c_ok").onclick = () => {
+      const v = $("c_code").value.trim(); const mm = v.match(/([A-Za-z0-9_-]{20,})\s*$/);
+      if(!mm) return toast("Code invalide");
+      code = mm[1]; try{ localStorage.setItem(CODE_KEY, code); }catch(_){}
+      history.replaceState(null, "", location.pathname + "#f=" + code);
+      lastTs = ""; closeSheet(); pull();
+    };
+    $("c_new").onclick = async () => {
+      try{
+        code = await rpc("menus_create"); try{ localStorage.setItem(CODE_KEY, code); }catch(_){}
+        history.replaceState(null, "", location.pathname + "#f=" + code);
+        state.plan = {}; state.custom = []; state.fav = []; lastTs = ""; closeSheet(); await pull(); openShare();
+      }catch(e){ toast("Impossible de créer : " + e.message); }
+    };
+  });
+  const x = $("shClose"); if(x) x.style.visibility = code ? "" : "hidden";
+}
+const _close = window.closeSheet;
+window.closeSheet = function(){ const x = $("shClose"); if(x) x.style.visibility = ""; _close(); };
+
+/* ---- partage + abonnement agenda ---- */
+async function copy(txt, label){
+  try{ await navigator.clipboard.writeText(txt); toast(label + " copié"); }
+  catch(e){ const i = document.createElement("textarea"); i.value = txt; document.body.appendChild(i); i.select(); try{ document.execCommand("copy"); toast(label + " copié"); }catch(_){ toast("Copie impossible"); } i.remove(); }
+}
+function openShare(){
+  openSheet("Partager le planning", `
+    <p class="hint">Envoyez ce lien à votre famille (SMS, WhatsApp…). Toute personne qui a le lien peut voir et modifier le planning : ne le publiez pas.</p>
+    <input class="inp" readonly value="${esc(shareLink())}" onclick="this.select()">
+    <div class="actions"><button class="btn main" id="s_copy">Copier le lien</button>${navigator.share ? '<button class="btn ghost" id="s_share">Envoyer…</button>' : ""}</div>
+    <p class="hint" style="margin-top:16px">📱 Astuce : dans Safari, touchez <b>Partager → Sur l'écran d'accueil</b> pour l'avoir comme une application.</p>`, () => {
+    $("s_copy").onclick = () => copy(shareLink(), "Lien");
+    if($("s_share")) $("s_share").onclick = () => navigator.share({ title:"Menus de la famille", url: shareLink() }).catch(()=>{});
+  });
+}
+function openIcs(){
+  const link = icsLink();
+  openSheet("Google Agenda / iPhone", `
+    <p class="hint">Abonnez votre agenda à ce lien : tous les repas et notes y apparaissent et se mettent à jour tout seuls (Google Agenda actualise toutes les quelques heures).</p>
+    <input class="inp" readonly value="${esc(link)}" onclick="this.select()">
+    <div class="actions"><button class="btn main" id="i_copy">Copier le lien agenda</button><a class="btn ghost" href="${esc(link.replace(/^https:/, "webcal:"))}" style="text-decoration:none">Ajouter à l'agenda iPhone</a></div>
+    <p class="hint" style="margin-top:14px"><b>Google Agenda</b> (sur ordinateur) : calendar.google.com → à côté de « Autres agendas » touchez <b>+</b> → <b>À partir de l'URL</b> → collez le lien → <b>Ajouter un agenda</b>.</p>
+    <div class="row2" style="margin-top:6px">
+      <div><label class="fl">Heure du midi</label><input class="inp" type="time" id="i_midi" value="${esc(gcal.midi)}"></div>
+      <div><label class="fl">Heure du soir</label><input class="inp" type="time" id="i_soir" value="${esc(gcal.soir)}"></div>
+    </div>
+    <div class="actions"><button class="btn ghost" id="i_save">Enregistrer les heures</button></div>`, () => {
+    $("i_copy").onclick = () => copy(link, "Lien agenda");
+    $("i_save").onclick = async () => {
+      gcal.midi = $("i_midi").value || "12:00"; gcal.soir = $("i_soir").value || "19:30";
+      try{ await rpc("menus_set", { p_code: code, p_field:"settings", p_value:{ midi:gcal.midi, soir:gcal.soir } }); toast("Heures enregistrées"); }
+      catch(e){ toast("Non enregistré"); }
+    };
+  });
+}
+$("gcalBtn").onclick = openIcs;
+$("gcalBtn").textContent = "📆 Agenda (Google, iPhone)";
+window.renderGcalInfo = () => { const el = $("gcalInfo"); if(el) el.textContent = ""; };
+renderGcalInfo();
+
+/* bouton partager dans l'en-tête */
+const sync = $("sync");
+const sh = document.createElement("button");
+sh.className = "btn"; sh.style.cssText = "margin-top:4px;font-size:13px;padding:6px 10px"; sh.textContent = "👪 Partager";
+sh.onclick = openShare;
+sync.parentNode.appendChild(sh);
+sync.parentNode.style.cssText = "display:flex;flex-direction:column;align-items:flex-end";
+
+/* démarrage */
+if(code){ pull(); } else { setSync("Pas de famille", true); askCode(false); }
+})();
+
+</script>
+</body>
+</html>

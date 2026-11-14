@@ -1314,8 +1314,9 @@ const sync = $("sync");
 const sh = document.createElement("button");
 sh.className = "btn"; sh.style.cssText = "margin-top:4px;font-size:13px;padding:6px 10px"; sh.textContent = "👪 Partager";
 sh.onclick = openShare;
-sync.parentNode.appendChild(sh);
-sync.parentNode.style.cssText = "display:flex;flex-direction:column;align-items:flex-end";
+const wrap = document.createElement("div");
+wrap.style.cssText = "display:flex;flex-direction:column;align-items:flex-end";
+sync.parentNode.insertBefore(wrap, sync); wrap.appendChild(sync); wrap.appendChild(sh);
 
 /* démarrage */
 if(code){ pull(); } else { setSync("Pas de famille", true); askCode(false); }

@@ -159,7 +159,8 @@ nav.tabs button.on{color:var(--green)}
 .overlay.top .sheet{border-radius:0 0 20px 20px;max-height:52vh;padding-bottom:0;box-shadow:0 8px 24px rgba(0,0,0,.18)}
 .overlay.top .sheet.tall{height:52vh}
 .overlay.top .sheet .bd{padding-bottom:12px}
-.overlay.top .tools .toggle,.overlay.top #popt,.overlay.top #pdiff{display:none}
+.overlay.top .tools .toggle,.overlay.top #pfpanel,.overlay.top #pactive{display:none}
+.sheet .tools .fpanel{max-height:38vh;overflow-y:auto}
 .overlay.top .sheet .hd{padding:10px 16px 8px}
 .sheet{background:var(--bg);width:100%;max-width:760px;max-height:92%;border-radius:20px 20px 0 0;display:flex;flex-direction:column;padding-bottom:env(safe-area-inset-bottom)}
 .sheet .hd{padding:14px 16px 10px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid var(--line)}
@@ -588,24 +589,31 @@ document.addEventListener("keydown", e => { if(e.key==="Escape") closeSheet(); }
 
 function openPicker(k, slot){
   const d = fromKey(k);
-  const pf = { q:"", adapt:true, diff:"Tous", fav:false, old:false };
+  const PKEYS = ["fShow","fTri","fDiff","fType","fTemps","fOrig","fMoment","fJours"];
+  const pf = { q:"", adapt:true, moment:"Tous", jours:"Tous", diff:"Tous", type:"Tous", temps:"Tous", orig:"Tous", show:"Tous", tri:"Par défaut" };
+  let open = false;
   const tools = `
-    <div class="searchwrap" id="pqwrap"><input class="search" id="pq" placeholder="Plat ou ingrédient…" type="search" enterkeyhint="search" autocomplete="off"><button class="clr" id="pqclr" aria-label="Effacer la recherche">✕</button></div>
+    <div class="searchrow">
+      <div class="searchwrap" id="pqwrap"><input class="search" id="pq" placeholder="Plat ou ingrédient…" type="search" enterkeyhint="search" autocomplete="off"><button class="clr" id="pqclr" aria-label="Effacer la recherche">✕</button></div>
+      <button class="fbtn" id="pfbtn">Filtres</button>
+    </div>
     <label class="toggle"><input type="checkbox" id="padapt" checked> Plats adaptés au ${SLOTS[slot].toLowerCase()} ${isWE(d)?"du week-end":"en semaine"}</label>
-    <div class="chips" id="popt"></div>
-    <div class="chips" id="pdiff"></div>`;
+    <div class="fpanel" id="pfpanel"></div>
+    <div class="activef" id="pactive"></div>`;
   openSheet(`${SLOTS[slot]} · ${longDate(d)}`, `
     <div class="actions" id="pacts" style="margin:0 0 10px"><button class="btn main" id="prand">🎲 Au hasard</button><button class="btn ghost" id="pfree">✏️ Autre plat</button></div>
     <div class="rescount" id="pcount"></div>
     <div id="plist"></div>`, () => {
     const candidates = (adapt = pf.adapt) => allMenus()
-      .map(m => ({m, sc: matchScore(m, pf.q)}))
-      .filter(x => x.sc > 0 && (!adapt || fitsSlot(x.m,d,slot)) && (pf.diff==="Tous"||x.m.diff===pf.diff) && (!pf.fav || isFav(x.m.nom)))
-      .sort((a,b) => b.sc - a.sc || (pf.old ? ((daysSince(b.m.nom) - daysSince(a.m.nom)) || 0) : 0) || (isFav(b.m.nom) - isFav(a.m.nom)) || a.m.temps - b.m.temps)
-      .map(x => x.m);
+      .filter(m => matchScore(m, pf.q) > 0 && (!adapt || fitsSlot(m,d,slot)) && passFilters(m, pf))
+      .sort((a,b) => sortWith(pf, pf.q)(a,b) || (isFav(b.nom) - isFav(a.nom)) || a.temps - b.temps);
     const draw = () => {
-      $("popt").innerHTML = `<button class="chip ${pf.fav?'on':''}" data-o="fav">★ Favoris (${state.fav.length})</button><button class="chip ${pf.old?'on':''}" data-o="old">🕒 Pas fait depuis longtemps</button>`;
-      $("pdiff").innerHTML = ["Tous",...DIFFS].map(x=>`<button class="chip ${pf.diff===x?'on':''}" data-d="${x}">${x==="Tous"?"Toutes difficultés":x}</button>`).join("");
+      const nAct = PKEYS.filter(id => pf[FDEF[id][0]] !== dflt(FDEF[id][0])).length;
+      $("pfbtn").innerHTML = "Filtres" + (nAct ? `<span class="badge">${nAct}</span>` : "");
+      $("pfbtn").classList.toggle("on", open);
+      $("pfpanel").classList.toggle("on", open);
+      $("pfpanel").innerHTML = open ? filterRowsHtml(pf, PKEYS) : "";
+      $("pactive").innerHTML = open ? "" : activeChipsHtml(pf, PKEYS);
       const q = pf.q.trim(), res = candidates();
       $("pacts").style.display = q ? "none" : "";
       $("pcount").textContent = q ? (res.length ? `${res.length} résultat${res.length>1?"s":""} pour « ${q} »` : "") : `${res.length} plat${res.length>1?"s":""} proposé${res.length>1?"s":""}`;
@@ -617,7 +625,7 @@ function openPicker(k, slot){
       }).join("");
       if(!res.length){
         const other = pf.adapt ? candidates(false).length : 0;
-        h = `<p class="hint">Aucun plat ne correspond${q?` à « ${esc(q)} »`:""}.</p>` +
+        h = `<p class="hint">Aucun plat ne correspond${q?` à « ${esc(q)} »`:" à ces filtres"}.</p>` +
           (other ? `<button class="btn" id="pall" style="margin-bottom:8px">Voir les ${other} plat${other>1?"s":""} hors ${SLOTS[slot].toLowerCase()} / ${isWE(d)?"week-end":"semaine"}</button>` : "");
       }
       if(q) h += `<button class="pick" data-free="1" style="background:var(--green-soft)"><div><div class="t">✏️ Mettre « ${esc(q)} »</div><div class="s">Utiliser ce texte comme repas</div></div></button>`;
@@ -626,15 +634,15 @@ function openPicker(k, slot){
     };
     bindSearch($("pq"), $("pqwrap"), $("pqclr"), v => { pf.q = v; draw(); $("shBody").scrollTop = 0; });
     $("padapt").onchange = e => { pf.adapt = e.target.checked; draw(); };
-    $("pdiff").onclick = e => { const b=e.target.closest("[data-d]"); if(b){ pf.diff=b.dataset.d; draw(); } };
-    $("popt").onclick = e => { const b=e.target.closest("[data-o]"); if(b){ pf[b.dataset.o] = !pf[b.dataset.o]; draw(); $("shBody").scrollTop = 0; } };
+    $("pfbtn").onclick = () => { open = !open; draw(); };
+    $("shTools").onclick = e => { const b = e.target.closest("[data-f]"); if(!b) return; pf[b.dataset.f] = b.dataset.v; draw(); $("shBody").scrollTop = 0; };
     $("plist").onclick = e => {
       const f = e.target.closest("[data-free]");
       if(f){ setSlot(k, slot, {plat: pf.q.trim()}); closeSheet(); toast("Ajouté : " + pf.q.trim()); return; }
       const b = e.target.closest("[data-n]"); if(b){ setSlot(k, slot, {plat:b.dataset.n}); closeSheet(); toast("Ajouté au "+SLOTS[slot].toLowerCase()+" du "+longDate(d)); }
     };
-    /* sur téléphone : faire défiler la liste ferme le clavier, pour voir tous les résultats */
-    $("shBody").addEventListener("touchstart", () => { if(document.activeElement === $("pq")) $("pq").blur(); }, {passive:true});
+    /* sur téléphone : faire défiler la liste ferme le clavier et replie les filtres */
+    $("shBody").addEventListener("touchstart", () => { if(document.activeElement === $("pq")) $("pq").blur(); if(open){ open = false; draw(); } }, {passive:true});
     $("prand").onclick = () => { const c=candidates(); if(!c.length) return toast("Aucun plat ne correspond"); const m=c[Math.floor(Math.random()*c.length)]; setSlot(k,slot,{plat:m.nom}); closeSheet(); toast("🎲 "+m.nom); };
     $("pfree").onclick = () => openFree(k, slot);
     draw();
@@ -764,30 +772,41 @@ function renderFilters(){
     $(id).innerHTML = vals.map(v=>`<button class="chip ${filters[f]===v?'on':''}" data-f="${f}" data-v="${esc(v)}">${v===dflt(f)?FLABEL[f]+" : "+(v==="Tous"?"tous":v.toLowerCase()):esc(v)}</button>`).join("");
   }
 }
+function passFilters(m, F){
+  if(F.moment!=="Tous" && !(m.moment===F.moment || m.moment==="Midi ou soir")) return false;
+  if(F.jours!=="Tous" && !(m.jours===F.jours || m.jours==="Tous")) return false;
+  if(F.diff!=="Tous" && m.diff!==F.diff) return false;
+  if(F.orig!=="Tous" && m.orig!==F.orig) return false;
+  if(F.show==="★ Favoris" && !isFav(m.nom)) return false;
+  if(F.show==="Jamais cuisinés" && daysSince(m.nom)!==Infinity) return false;
+  if(F.type==="Mes plats" && !m.mine) return false;
+  if(F.type!=="Tous" && F.type!=="Mes plats" && m.type!==F.type) return false;
+  const tm = m.temps;
+  if(F.temps==="≤ 15 min" && tm>15) return false;
+  if(F.temps==="≤ 30 min" && tm>30) return false;
+  if(F.temps==="≤ 1 h" && tm>60) return false;
+  if(F.temps==="Plus d'1 h" && tm<=60) return false;
+  return true;
+}
+function sortWith(F, q){
+  return (a,b) => {
+    if(q.trim()){ const d = matchScore(b,q) - matchScore(a,q); if(d) return d; }
+    if(F.tri==="Pas cuisiné depuis longtemps"){ const d = daysSince(b.nom) - daysSince(a.nom); if(d && !isNaN(d)) return d; return (isFav(b.nom)-isFav(a.nom)); }
+    if(F.tri==="Les plus rapides") return a.temps - b.temps;
+    return 0;
+  };
+}
+/* panneau de filtres réutilisable (onglet Menus et choix du plat) */
+function filterRowsHtml(F, keys){
+  return keys.map(id => { const [f, vals] = FDEF[id];
+    return `<div class="chips">${vals.map(v=>`<button class="chip ${F[f]===v?'on':''}" data-f="${f}" data-v="${esc(v)}">${v===dflt(f)?FLABEL[f]+" : "+(v==="Tous"?"tous":v.toLowerCase()):esc(v)}</button>`).join("")}</div>`; }).join("");
+}
+function activeChipsHtml(F, keys){
+  return keys.map(id => FDEF[id][0]).filter(f => F[f] !== dflt(f)).map(f => `<button class="chip" data-f="${f}" data-v="${esc(dflt(f))}">${esc(F[f])} ✕</button>`).join("");
+}
 function filtered(){
   const q = filters.q;
-  return allMenus().filter(m => {
-    if(q.trim() && matchScore(m, q) === 0) return false;
-    if(filters.moment!=="Tous" && !(m.moment===filters.moment || m.moment==="Midi ou soir")) return false;
-    if(filters.jours!=="Tous" && !(m.jours===filters.jours || m.jours==="Tous")) return false;
-    if(filters.diff!=="Tous" && m.diff!==filters.diff) return false;
-    if(filters.orig!=="Tous" && m.orig!==filters.orig) return false;
-    if(filters.show==="★ Favoris" && !isFav(m.nom)) return false;
-    if(filters.show==="Jamais cuisinés" && daysSince(m.nom)!==Infinity) return false;
-    if(filters.type==="Mes plats" && !m.mine) return false;
-    if(filters.type!=="Tous" && filters.type!=="Mes plats" && m.type!==filters.type) return false;
-    const t = m.temps;
-    if(filters.temps==="≤ 15 min" && t>15) return false;
-    if(filters.temps==="≤ 30 min" && t>30) return false;
-    if(filters.temps==="≤ 1 h" && t>60) return false;
-    if(filters.temps==="Plus d'1 h" && t<=60) return false;
-    return true;
-  }).sort((a,b) => {
-    if(q.trim()){ const d = matchScore(b,q) - matchScore(a,q); if(d) return d; }
-    if(filters.tri==="Pas cuisiné depuis longtemps"){ const d = daysSince(b.nom) - daysSince(a.nom); if(d && !isNaN(d)) return d; return (isFav(b.nom)-isFav(a.nom)); }
-    if(filters.tri==="Les plus rapides") return a.temps - b.temps;
-    return 0;
-  });
+  return allMenus().filter(m => (!q.trim() || matchScore(m, q) > 0) && passFilters(m, filters)).sort(sortWith(filters, q));
 }
 function renderList(){
   renderFilters();

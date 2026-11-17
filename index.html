@@ -135,6 +135,14 @@ nav.tabs button.on{color:var(--green)}
 .hist.never{color:var(--green);font-weight:700}
 .pen{font-size:15px;padding:2px 4px;margin-left:2px;vertical-align:middle;opacity:.85}
 .notebox .pen{margin-left:auto;flex:none}
+.accbox{margin-top:8px;background:#EAF3E6;color:#2F5D2A;border-radius:10px;padding:7px 10px;font-size:14px;display:flex;gap:6px;align-items:center;cursor:pointer}
+.accbox .pen{margin-left:auto;flex:none}
+.btn.acc{background:#EAF3E6;color:#2F5D2A}
+.accgrp{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.04em;color:var(--muted);margin:14px 2px 6px}
+.accchips{display:flex;flex-wrap:wrap;gap:6px}
+.accchips .chip.on{background:#3F7A35;border-color:#3F7A35;color:#fff}
+.accsel{padding:8px 2px 0;font-size:14px;font-weight:700;color:#2F5D2A}
+.overlay.top #aok,.overlay.top #askip{display:none}
 .platrow{display:flex;align-items:center;justify-content:space-between;gap:8px}
 .mcard .more{display:none;margin-top:8px;font-size:14px;border-top:1px dashed var(--line);padding-top:8px}
 .mcard.open .more{display:block}
@@ -318,6 +326,15 @@ const BASE = [{"nom": "Croque-monsieur", "acc": "Salade verte ou soupe", "moment
 BASE.forEach(m => m.base = true);
 
 const DIFFS = ["Très facile","Facile","Moyen","Élaboré"];
+const ACCS = {
+  "Féculents": ["Riz","Riz basmati","Riz pilaf","Pâtes","Coquillettes","Tagliatelles","Purée","Pommes de terre vapeur","Pommes de terre sautées","Pommes grenaille","Frites","Potatoes","Gratin dauphinois","Semoule","Quinoa","Boulgour","Lentilles","Polenta","Gnocchis","Patate douce","Pain"],
+  "Légumes": ["Haricots verts","Petits pois","Carottes","Petits pois-carottes","Brocolis","Courgettes","Ratatouille","Épinards","Chou-fleur","Poêlée de légumes","Légumes rôtis","Champignons","Endives braisées","Tomates provençales","Poireaux","Haricots blancs","Flageolets","Butternut rôtie"],
+  "Salades et crudités": ["Salade verte","Carottes râpées","Tomates","Concombre","Taboulé","Coleslaw","Salade composée","Crudités"]
+};
+function accSuggest(m){
+  if(!m || !m.acc || m.acc==="—") return [];
+  return m.acc.split(/,| ou | et /).map(x=>x.trim()).filter(Boolean).map(x => x.charAt(0).toUpperCase()+x.slice(1));
+}
 const TYPES = ["Viande","Poisson","Œufs","Végétarien"];
 const MOIS = ["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
 const JOURS = ["dimanche","lundi","mardi","mercredi","jeudi","vendredi","samedi"];
@@ -484,13 +501,15 @@ function renderDay(){
     if(s.plat){
       h += `<div class="platrow"><div class="plat" data-act="${!m || m.mine ? 'edit' : 'pick'}" data-slot="${slot}" style="cursor:pointer">${esc(s.plat)}${!m || m.mine ? ` <button class="pen" data-act="edit" data-slot="${slot}" aria-label="Modifier le plat">✏️</button>` : ""}</div>${m?`<button class="star ${isFav(s.plat)?'on':''}" data-act="fav" data-slot="${slot}" aria-label="Favori">${isFav(s.plat)?"★":"☆"}</button>`:""}</div>`;
       if(m){
-        h += `<div class="meta"><span>⏱ ${m.temps} min</span><span class="pill ${diffClass(m.diff)}">${esc(m.diff)}</span>${m.acc&&m.acc!=="—"?`<span>+ ${esc(m.acc)}</span>`:""}</div>`;
+        h += `<div class="meta"><span>⏱ ${m.temps} min</span><span class="pill ${diffClass(m.diff)}">${esc(m.diff)}</span>${!s.acc && m.acc && m.acc!=="—"?`<span>Suggéré : ${esc(m.acc)}</span>`:""}</div>`;
         if(m.astuce) h += `<div class="ing">💡 ${esc(m.astuce)}</div>`;
       }
+      if(s.acc) h += `<div class="accbox" data-act="acc" data-slot="${slot}">🥗 <span style="flex:1">Avec ${esc(s.acc)}</span><button class="pen" data-act="acc" data-slot="${slot}" aria-label="Modifier l'accompagnement">✏️</button></div>`;
     } else h += `<div class="empty">Rien de prévu</div>`;
     if(s.note) h += `<div class="notebox" data-act="note" data-slot="${slot}" style="cursor:pointer">📝 <span style="flex:1">${esc(s.note)}</span><button class="pen" data-act="note" data-slot="${slot}" aria-label="Modifier la note">✏️</button></div>`;
     h += `<div class="actions">
       <button class="btn ${s.plat?'ghost':'main'}" data-act="pick" data-slot="${slot}">${s.plat?"Changer":"Choisir un plat"}</button>
+      ${s.plat && !s.acc ? `<button class="btn acc" data-act="acc" data-slot="${slot}">+ Accompagnement</button>` : ""}
       ${s.note ? "" : `<button class="btn note" data-act="note" data-slot="${slot}">+ Note</button>`}
       ${s.plat||s.note?`<button class="btn danger" data-act="clear" data-slot="${slot}">Effacer</button>`:""}
     </div></div>`;
@@ -505,7 +524,7 @@ function renderWeek(){
   let h = "";
   for(let i=0;i<7;i++){
     const d = addDays(mon,i), k = key(d);
-    const cell = (slot, c) => { const s = getSlot(k,slot)||{}; return `<div class="c ${c} ${s.plat?'f':''}" data-k="${k}">${s.plat?esc(s.plat):'<span class="mut">—</span>'}${s.note?`<small>📝 ${esc(s.note)}</small>`:""}</div>`; };
+    const cell = (slot, c) => { const s = getSlot(k,slot)||{}; return `<div class="c ${c} ${s.plat?'f':''}" data-k="${k}">${s.plat?esc(s.plat):'<span class="mut">—</span>'}${s.acc?`<span class="mut" style="display:block;font-size:12px">+ ${esc(s.acc)}</span>`:""}${s.note?`<small>📝 ${esc(s.note)}</small>`:""}</div>`; };
     h += `<div class="weekrow${+d===+sel?' cur':''}"><div class="d">${JOURS[d.getDay()].slice(0,3)} ${d.getDate()}</div>${cell("midi","m")}${cell("soir","s")}</div>`;
   }
   $("weekList").innerHTML = `<div class="weekrow" style="font-size:11px;font-weight:800;color:var(--muted);text-transform:uppercase"><div></div><div>☀️ Midi</div><div>🌙 Soir</div></div>` + h;
@@ -638,17 +657,63 @@ function openPicker(k, slot){
     $("shTools").onclick = e => { const b = e.target.closest("[data-f]"); if(!b) return; pf[b.dataset.f] = b.dataset.v; draw(); $("shBody").scrollTop = 0; };
     $("plist").onclick = e => {
       const f = e.target.closest("[data-free]");
-      if(f){ setSlot(k, slot, {plat: pf.q.trim()}); closeSheet(); toast("Ajouté : " + pf.q.trim()); return; }
-      const b = e.target.closest("[data-n]"); if(b){ setSlot(k, slot, {plat:b.dataset.n}); closeSheet(); toast("Ajouté au "+SLOTS[slot].toLowerCase()+" du "+longDate(d)); }
+      if(f){ choosePlat(k, slot, pf.q.trim()); return; }
+      const b = e.target.closest("[data-n]"); if(b){ choosePlat(k, slot, b.dataset.n); }
     };
     /* sur téléphone : faire défiler la liste ferme le clavier et replie les filtres */
     $("shBody").addEventListener("touchstart", () => { if(document.activeElement === $("pq")) $("pq").blur(); if(open){ open = false; draw(); } }, {passive:true});
-    $("prand").onclick = () => { const c=candidates(); if(!c.length) return toast("Aucun plat ne correspond"); const m=c[Math.floor(Math.random()*c.length)]; setSlot(k,slot,{plat:m.nom}); closeSheet(); toast("🎲 "+m.nom); };
+    $("prand").onclick = () => { const c=candidates(); if(!c.length) return toast("Aucun plat ne correspond"); const m=c[Math.floor(Math.random()*c.length)]; choosePlat(k, slot, m.nom); };
     $("pfree").onclick = () => openFree(k, slot);
     draw();
   }, { tools, tall:true });
 }
 
+/* après le choix d'un plat : on propose tout de suite l'accompagnement */
+function choosePlat(k, slot, nom){
+  const cur = getSlot(k, slot) || {};
+  const same = cur.plat === nom;
+  setSlot(k, slot, same ? {plat:nom} : {plat:nom, acc:""});
+  if(same && cur.acc){ closeSheet(); return; }
+  openAcc(k, slot, true);
+}
+function openAcc(k, slot, afterPick){
+  const s = getSlot(k, slot) || {};
+  const m = s.plat ? findMenu(s.plat) : null;
+  const picked = new Set((s.acc || "").split(",").map(x=>x.trim()).filter(Boolean));
+  const sugg = accSuggest(m);
+  const tools = `<div class="searchwrap" id="aqwrap"><input class="search" id="aq" placeholder="Rechercher ou écrire un accompagnement…" type="search" enterkeyhint="done" autocomplete="off"><button class="clr" id="aqclr" aria-label="Effacer">✕</button></div>
+    <div class="accsel" id="asel"></div>
+    <div class="actions" style="margin-top:6px"><button class="btn main" id="aok">Valider</button><button class="btn ghost" id="askip">${afterPick ? "Sans accompagnement" : "Aucun"}</button></div>`;
+  openSheet(`Accompagnement · ${s.plat || ""}`, `<div id="alist"></div>`, () => {
+    let q = "";
+    const draw = () => {
+      $("asel").textContent = picked.size ? "✓ " + [...picked].join(", ") : (afterPick ? "Choisissez un ou plusieurs accompagnements" : "Aucun accompagnement choisi");
+      const fq = fold(q.trim());
+      const chip = x => `<button class="chip ${picked.has(x)?'on':''}" data-a="${esc(x)}">${q ? hl(x, q) : esc(x)}</button>`;
+      const groups = [];
+      if(sugg.length && !fq) groups.push(["Suggéré avec ce plat", sugg]);
+      const extra = [...picked].filter(x => !sugg.includes(x) && !Object.values(ACCS).some(l => l.includes(x)));
+      if(extra.length && !fq) groups.push(["Vos choix", extra]);
+      for(const [g, l] of Object.entries(ACCS)){ const f = l.filter(x => !fq || fold(x).includes(fq)); if(f.length) groups.push([g, f]); }
+      let h = groups.map(([g,l]) => `<div class="accgrp">${esc(g)}</div><div class="accchips">${l.map(chip).join("")}</div>`).join("");
+      if(q.trim() && !Object.values(ACCS).flat().some(x => fold(x) === fq)) h = `<div class="accchips" style="margin-top:6px"><button class="chip" data-new="1" style="background:#EAF3E6">＋ Ajouter « ${esc(q.trim())} »</button></div>` + h;
+      $("alist").innerHTML = h || `<p class="hint">Aucun résultat.</p>`;
+      $("aok").textContent = picked.size ? `Valider (${picked.size})` : "Valider";
+    };
+    bindSearch($("aq"), $("aqwrap"), $("aqclr"), v => { q = v; draw(); });
+    $("aq").addEventListener("keydown", e => { if(e.key === "Enter" && q.trim()){ picked.add(q.trim().charAt(0).toUpperCase()+q.trim().slice(1)); $("aq").value = ""; q = ""; $("aqwrap").classList.remove("has"); draw(); } });
+    $("alist").onclick = e => {
+      const n = e.target.closest("[data-new]");
+      if(n){ const v = q.trim(); picked.add(v.charAt(0).toUpperCase()+v.slice(1)); $("aq").value = ""; q = ""; $("aqwrap").classList.remove("has"); draw(); return; }
+      const b = e.target.closest("[data-a]"); if(!b) return;
+      const v = b.dataset.a; picked.has(v) ? picked.delete(v) : picked.add(v); draw();
+    };
+    $("aok").onclick = () => { setSlot(k, slot, {acc: [...picked].join(", ")}); closeSheet(); toast(picked.size ? "Accompagnement : " + [...picked].join(", ") : "Ajouté au " + SLOTS[slot].toLowerCase()); };
+    $("askip").onclick = () => { setSlot(k, slot, {acc:""}); closeSheet(); };
+    $("shBody").addEventListener("touchstart", () => { if(document.activeElement === $("aq")) $("aq").blur(); }, {passive:true});
+    draw();
+  }, { tools, tall:true });
+}
 function openFree(k, slot){
   const cur = getSlot(k,slot) || {};
   openSheet(cur.plat ? `Modifier le repas · ${SLOTS[slot]}` : `Autre plat · ${SLOTS[slot]}`, `
@@ -834,7 +899,9 @@ function renderShop(){
     const parts = [];
     for(const slot of ["midi","soir"]){
       const s = getSlot(k,slot); if(!s || !s.plat) continue;
-      parts.push(`<b>${SLOTS[slot]}</b> ${esc(s.plat)}${s.note?` <span style="color:var(--note)">📝 ${esc(s.note)}</span>`:""}`);
+      parts.push(`<b>${SLOTS[slot]}</b> ${esc(s.plat)}${s.acc?` + ${esc(s.acc)}`:""}${s.note?` <span style="color:var(--note)">📝 ${esc(s.note)}</span>`:""}`);
+      const add = x => { const kk = x.toLowerCase(); const c = counts.get(kk) || {label: x.charAt(0).toUpperCase()+x.slice(1), n:0}; c.n++; counts.set(kk, c); };
+      if(s.acc) s.acc.split(",").map(x=>x.trim()).filter(Boolean).forEach(add);
       const m = findMenu(s.plat); if(!m || !m.ing) continue;
       m.ing.split(",").map(x=>x.trim()).filter(Boolean).forEach(x => {
         const kk = x.toLowerCase();
@@ -880,10 +947,11 @@ $("slots").onclick = e => {
   const b = e.target.closest("[data-act]"); if(!b) return;
   const k = key(sel), slot = b.dataset.slot;
   if(b.dataset.act==="fav"){ const s = getSlot(k, slot); if(s && s.plat) toggleFav(s.plat); return; }
+  if(b.dataset.act==="acc"){ openAcc(k, slot); return; }
   if(b.dataset.act==="edit"){ const s = getSlot(k, slot) || {}; const m = s.plat && findMenu(s.plat); if(m && m.mine) openAddPlat(m); else openFree(k, slot); return; }
   if(b.dataset.act==="pick") openPicker(k, slot);
   if(b.dataset.act==="note") openNote(k, slot);
-  if(b.dataset.act==="clear") setSlot(k, slot, {plat:"", note:""});
+  if(b.dataset.act==="clear") setSlot(k, slot, {plat:"", note:"", acc:""});
 };
 function goDay(n, anim){
   sel = addDays(sel, n);
@@ -1086,13 +1154,13 @@ function mealBody(k, slot, s){
   const m = s.plat ? findMenu(s.plat) : null;
   const desc = [
     s.note ? "📝 " + s.note : "",
-    m && m.acc && m.acc!=="—" ? "Accompagnement : " + m.acc : "",
+    s.acc ? "Accompagnement : " + s.acc : (m && m.acc && m.acc!=="—" ? "Accompagnement suggéré : " + m.acc : ""),
     m ? "Temps : " + m.temps + " min · " + m.diff : "",
     m && m.ing ? "Ingrédients : " + m.ing : "",
     m && m.astuce ? "💡 " + m.astuce : "",
     "— Menus de la famille"
   ].filter(Boolean).join("\n");
-  return { summary: (slot==="midi"?"☀️ Midi : ":"🌙 Soir : ") + (s.plat || "Repas"), description: desc, startTime: k+"T"+t0+":00", endTime: k+"T"+addMin(t0,gcal.dur||60)+":00" };
+  return { summary: (slot==="midi"?"☀️ Midi : ":"🌙 Soir : ") + (s.plat || "Repas") + (s.acc ? " + " + s.acc : ""), description: desc, startTime: k+"T"+t0+":00", endTime: k+"T"+addMin(t0,gcal.dur||60)+":00" };
 }
 async function runGcalSync(manual){
   if(!gcal.on) return;

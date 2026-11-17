@@ -71,8 +71,8 @@ function synchroniser() {
       const r = plan[k][slot];
       if (!r || (!r.plat && !r.note)) return;
       voulus[k + "_" + slot] = {
-        titre: (slot === "midi" ? "☀️ Midi : " : "🌙 Soir : ") + (r.plat || r.note),
-        desc: [r.note ? "📝 " + r.note : "", "— Menus de la famille"].filter(String).join("\n"),
+        titre: (slot === "midi" ? "☀️ Midi : " : "🌙 Soir : ") + (r.plat || r.note) + (r.plat && r.acc ? " + " + r.acc : ""),
+        desc: [r.acc ? "🥗 Avec " + r.acc : "", r.note ? "📝 " + r.note : "", "— Menus de la famille"].filter(String).join("\n"),
         debut: Utilities.parseDate(k + " " + heures[slot], tz, "yyyy-MM-dd HH:mm"),
       };
     });

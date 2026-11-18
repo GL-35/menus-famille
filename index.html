@@ -1278,14 +1278,24 @@ function applyRemote(d){
   synced = { plan: clone(state.plan), custom: JSON.stringify(state.custom), fav: JSON.stringify(state.fav) };
   lastTs = d.updated_at || ""; saveLocal(); renderAll();
 }
+/* modifications faites sur cet appareil et pas encore envoyées */
+function hasLocalChanges(){
+  return Object.keys(diffPlan()).length > 0 || JSON.stringify(state.custom) !== synced.custom || JSON.stringify(state.fav) !== synced.fav;
+}
+let pulling = false;
 async function pull(){
-  if(!code || busy || dirty) return;
+  if(!code || busy || dirty || pulling) return;
+  if(hasLocalChanges()){ push(); return; }
+  pulling = true;
   try{
     const d = await rpc("menus_get", { p_code: code });
     if(!d){ setSync("Code famille inconnu", true); return askCode(true); }
-    if(d.updated_at !== lastTs && !busy && !dirty) applyRemote(d);
+    /* ne jamais écraser une modification faite pendant le chargement */
+    if(busy || dirty || hasLocalChanges()){ push(); return; }
+    if(d.updated_at !== lastTs) applyRemote(d);
     setSync("✓ Synchronisé");
   }catch(e){ setSync("Hors ligne", true); }
+  finally{ pulling = false; }
 }
 function diffPlan(){
   const patch = {}; const a = synced.plan, b = state.plan;
@@ -1302,16 +1312,17 @@ async function push(){
   if(busy){ dirty = true; return; }
   busy++; dirty = false; setSync("Enregistrement…");
   try{
+    /* plats perso et favoris d'abord : ce sont les plus précieux */
+    const c = JSON.stringify(state.custom);
+    if(c !== synced.custom){ const val = JSON.parse(c); lastTs = await rpc("menus_set", { p_code: code, p_field:"custom", p_value: val }); synced.custom = c; }
+    const f = JSON.stringify(state.fav);
+    if(f !== synced.fav){ const val = JSON.parse(f); lastTs = await rpc("menus_set", { p_code: code, p_field:"fav", p_value: val }); synced.fav = f; }
     const patch = diffPlan();
     if(Object.keys(patch).length){
       const snap = clone(state.plan);
       lastTs = await rpc("menus_patch_plan", { p_code: code, p_patch: patch });
       synced.plan = snap;
     }
-    const c = JSON.stringify(state.custom);
-    if(c !== synced.custom){ lastTs = await rpc("menus_set", { p_code: code, p_field:"custom", p_value: state.custom }); synced.custom = c; }
-    const f = JSON.stringify(state.fav);
-    if(f !== synced.fav){ lastTs = await rpc("menus_set", { p_code: code, p_field:"fav", p_value: state.fav }); synced.fav = f; }
     setSync("✓ Enregistré");
   }catch(e){ setSync("Non enregistré – nouvel essai…", true); setTimeout(push, 5000); }
   busy--;

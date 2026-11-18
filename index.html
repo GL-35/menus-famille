@@ -770,6 +770,7 @@ function openPlan(nom){
 }
 
 function openAddPlat(edit){
+  if(edit && !edit.nom) edit = null; /* sécurité : jamais un clic pris pour un plat */
   const v = edit || { nom:"", acc:"", moment:"Midi ou soir", jours:"Tous", diff:"Facile", temps:30, type:"Viande", ing:"", astuce:"" };
   const opt = (arr, x) => arr.map(o=>`<option ${o===x?"selected":""}>${o}</option>`).join("");
   openSheet(edit ? "Modifier le plat" : "Ajouter un plat", `
@@ -858,7 +859,7 @@ function sortWith(F, q){
     if(q.trim()){ const d = matchScore(b,q) - matchScore(a,q); if(d) return d; }
     if(F.tri==="Pas cuisiné depuis longtemps"){ const d = daysSince(b.nom) - daysSince(a.nom); if(d && !isNaN(d)) return d; return (isFav(b.nom)-isFav(a.nom)); }
     if(F.tri==="Les plus rapides") return a.temps - b.temps;
-    return 0;
+    return (b.mine?1:0) - (a.mine?1:0);   /* vos plats en premier */
   };
 }
 /* panneau de filtres réutilisable (onglet Menus et choix du plat) */
@@ -1028,7 +1029,7 @@ $("list").onclick = e => {
     state.custom = state.custom.filter(m=>m.nom!==nom); saveCustom(); renderAll(); toast("Plat supprimé");
   }
 };
-$("addPlatBtn").onclick = openAddPlat;
+$("addPlatBtn").onclick = () => openAddPlat();
 
 $("prevW").onclick = () => { shopWeek = addDays(shopWeek,-7); renderShop(); };
 $("nextW").onclick = () => { shopWeek = addDays(shopWeek,7); renderShop(); };
